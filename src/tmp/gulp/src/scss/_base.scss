@@ -12,6 +12,7 @@
 }
 
 html {
+  font-family: $ff;
   font-size: 10px;
 
   body {
@@ -76,12 +77,5 @@ html {
 
   @media #{$device-l} {
     background-size: 180px 1px;
-  }
-}
-
-%typewrite {
-  &::after {
-    content: "_";
-    font-size: 1.0em;
   }
 }

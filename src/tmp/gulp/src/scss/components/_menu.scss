@@ -68,7 +68,7 @@
     }
   }
 
-  @at-root #container.is-open {
+  &.is-open {
     overflow: hidden;
 
     .menu {

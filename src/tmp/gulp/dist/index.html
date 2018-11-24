@@ -14,16 +14,15 @@
 </head>
 <body>
 <div id="container">
-<!-- <div id="container" class="is-open"> -->
 
   <div class="l-header">
     <header>
       <div class="wrap">
-        <div class="menu-container js-menu-container">
+        <div class="menu-container">
           <h1 class="site-logo">
             <a href="#"><img src="./images/logo.png" alt="1Day Release"></a>
           </h1>
-          <div class="menu text-uppercase">
+          <div class="menu text-uppercase js-menu-container">
             <nav>
               <a class="menu-button js-menu-toggle" href="#">
                 <span class="menu-button-icon">
@@ -33,7 +32,7 @@
                 </span>
                 <span class="menu-button-text">Menu</span>
               </a>
-              <ul class="menu-list text-uppercase js-menu-switch">
+              <ul class="menu-list text-uppercase js-menu-item">
                 <li><a class="js-page-scroll" href="#about">About</a></li>
                 <li><a class="js-page-scroll" href="#activity">Activity<br>Record</a></li>
                 <li><a class="js-page-scroll" href="#products">Products</a></li>
@@ -87,43 +86,45 @@
               Each "goal" to raise "personal skills" and "to realize ideas", how far can we make good service in a limited time of one day?<br>
               We will challenge.
             </p>
-
-            <div id="activity" class="">
-              <section>
-                <h3 class="">Activity Record.</h3>
-                <div class="js-carousels-container">
-                  <ul class="activity-list js-carousels-list">
-                    <li class="js-carousels-item">
-                      <a href="" class="">
-                        <time datetime="2018-00-00">2018/00/00</time>
-                        <img src="" alt="">
-                        <p class="">大胸筋を鍛えながら、タスク管理サービスを作った結果...神展開。</p>
-                      </a>
-                    </li>
-                    <li class="js-carousels-item">
-                      <div class="">
-                        <time datetime="2018-00-00">2018/00/00</time>
-                        <img src="" alt="">
-                        <p class="">大胸筋を鍛えながら、タスク管理サービスを作った結果...神展開。</p>
-                      </div>
-                    </li>
-                  </ul>
-                  <div class="pager-container js-carousels-pager">
-                    <ul class="pager-list">
-                      <li></li>
-                      <li></li>
-                    </ul>
-                    <div class="pager-bar"></div>
-                  </div>
-                </div>
-              </section>
-            </div>
           </section>
         </div>
       </div>
       <div class="background-image" style="background-image: url(./images/);"></div>
     </div>
     <!-- / About Section -->
+
+    <!-- Activity Section -->
+    <div id="activity">
+      <section>
+        <h2 class="">Activity Record.</h2>
+        <div class="js-carousels-container">
+          <ul class="activity-list js-carousels-list">
+            <li class="js-carousels-item">
+              <a href="" class="">
+                <time datetime="2018-00-00">2018/00/00</time>
+                <img src="" alt="">
+                <p class="">大胸筋を鍛えながら、タスク管理サービスを作った結果...神展開。</p>
+              </a>
+            </li>
+            <li class="js-carousels-item">
+              <div class="">
+                <time datetime="2018-00-00">2018/00/00</time>
+                <img src="" alt="">
+                <p class="">大胸筋を鍛えながら、タスク管理サービスを作った結果...神展開。</p>
+              </div>
+            </li>
+          </ul>
+          <div class="pager-container js-carousels-pager">
+            <ul class="pager-list">
+              <li></li>
+              <li></li>
+            </ul>
+            <div class="pager-bar"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- / Activity Section -->
 
     <!-- Products Section -->
     <div id="products">

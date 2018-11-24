@@ -14,6 +14,12 @@
     }
 
     &.is-typewrite {
+      line-height: 2.0;
+      font-family: $ff-mono;
+      letter-spacing: 0.15em;
+      font-size: 1.8rem;
+      font-weight: bold;
+      white-space: nowrap;
       @extend %typewrite;
     }
   }
