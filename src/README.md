@@ -1,0 +1,19 @@
+# 1Day Release Site
+## Components
+- header
+  - logo
+  - menu
+  - loop-text
+  - typing-text
+- about
+- acticivies
+  - slide-articles
+- productions
+  - slide-productions
+- members
+  - member
+- footer
+  - typing-text
+  - sitemap
+  - goto-top
+  - copyright
