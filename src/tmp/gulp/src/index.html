@@ -14,28 +14,36 @@
 </head>
 <body>
 <div id="container">
+<!-- <div id="container" class="is-open"> -->
 
   <div class="l-header">
     <header>
-      <div class="contents">
-        <div class="wrap">
-          <div class="menu-container">
-            <h1 class="site-logo">
-              <a href="#"><img src="./images/" alt="1Day Release"></a>
-            </h1>
-            <div class="menu js-menu-container">
-              <nav>
-                <a class="menu-button js-menu-toggle" href="#">Menu</a>
-                <ul class="menu-list js-menu-switch">
-                  <li><a class="js-page-scroll" href="#about">About</a></li>
-                  <li><a class="js-page-scroll" href="#activity">Activity Record</a></li>
-                  <li><a class="js-page-scroll" href="#products">Products</a></li>
-                  <li><a class="js-page-scroll" href="#member">Member</a></li>
-                  <li><a class="js-page-scroll" href="#contact">Contact</a></li>
-                </ul>
-              </nav>
-            </div>
+      <div class="wrap">
+        <div class="menu-container js-menu-container">
+          <h1 class="site-logo">
+            <a href="#"><img src="./images/logo.png" alt="1Day Release"></a>
+          </h1>
+          <div class="menu text-uppercase">
+            <nav>
+              <a class="menu-button js-menu-toggle" href="#">
+                <span class="menu-button-icon">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </span>
+                <span class="menu-button-text">Menu</span>
+              </a>
+              <ul class="menu-list text-uppercase js-menu-switch">
+                <li><a class="js-page-scroll" href="#about">About</a></li>
+                <li><a class="js-page-scroll" href="#activity">Activity<br>Record</a></li>
+                <li><a class="js-page-scroll" href="#products">Products</a></li>
+                <li><a class="js-page-scroll" href="#member">Member</a></li>
+                <li><a class="js-page-scroll" href="#contact">Contact</a></li>
+              </ul>
+            </nav>
           </div>
+        </div>
+        <div class="contents">
           <div class="hero-container">
             <p class="hero-catch is-typewrite js-typewriter">
               Go beyond the <strong class="text-color-accent">limit.</strong><br>
@@ -44,8 +52,12 @@
             <p class="hero-catch">
               <small><span class="text-color-accent">1Day</span>でリリースする。</small>
             </p>
+            <p class="hero-updated">
+              <span class="text-uppercase text-color-accent">Activity Record :</span><br>
+              <time datetime="2018-00-00">2018/00/00</time> - <span class="">今日はタスク管理サービスを</span>
+            </p>
             <p class="">
-              <a href="#about" class="js-page-scroll">View About</a>
+              <a class="js-page-scroll" href="#about">View About</a>
             </p>
           </div>
         </div>
@@ -82,11 +94,11 @@
                 <div class="js-carousels-container">
                   <ul class="activity-list js-carousels-list">
                     <li class="js-carousels-item">
-                      <div class="">
+                      <a href="" class="">
                         <time datetime="2018-00-00">2018/00/00</time>
                         <img src="" alt="">
                         <p class="">大胸筋を鍛えながら、タスク管理サービスを作った結果...神展開。</p>
-                      </div>
+                      </a>
                     </li>
                     <li class="js-carousels-item">
                       <div class="">

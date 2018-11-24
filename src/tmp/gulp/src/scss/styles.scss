@@ -10,3 +10,12 @@
 // Layout
 // ===============================================
 @import "_base";
+@import "components/_text";
+
+
+// Components
+// ===============================================
+@import "components/_header.scss";
+@import "components/_menu.scss";
+@import "components/_hero.scss";
+@import "components/_footer.scss";

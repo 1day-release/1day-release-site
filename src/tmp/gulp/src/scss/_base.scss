@@ -13,4 +13,68 @@
 
 html {
   font-size: 10px;
+
+  body {
+    font-size: 1.2rem;
+
+    @media #{$device-l} {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+#container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-width: $sp-min-width;
+  background-color: #000;
+  color: #fff;
+
+  @media #{$device-l} {
+    min-width: $pc-max-width;
+  }
+}
+
+.contents {
+  position: relative;
+  z-index: 30;
+}
+
+.background-image {
+  position: relative;
+  z-index: 1;
+  background-size: contain;
+}
+
+.wrap {
+  margin: 0 20px;
+
+  @media #{$device-l} {
+    width: $pc-min-width;
+    margin: 0 auto;
+  }
+}
+
+.cover {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  @extend %cover;
+  pointer-events: none;
+}
+
+%cover {
+  background-image: url("#{$root}bg_line.svg");
+  background-repeat: repeat;
+  background-position: center top;
+  background-size: 75px 1px;
+
+  @media #{$device-l} {
+    background-size: 180px 1px;
+  }
 }

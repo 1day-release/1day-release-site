@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+// ***********************************************
+//  Text
+// ***********************************************
+.text {
+  &-uppercase {
+    text-transform: uppercase;
+  }
+
+  &-color {
+    &-accent {
+      color: map-get($color-brand, "accent");
+    }
+  }
+}
