@@ -4,12 +4,23 @@
 //  Hero
 // ***********************************************
 .hero {
-  &-container {
+
+  @media #{$device-l} {
+  }
+
+  &-catch {
 
     @media #{$device-l} {
     }
+
+    &.is-typewrite {
+      @extend %typewrite;
+    }
   }
 
-  @media #{$device-l} {
+  &-catch {
+
+    @media #{$device-l} {
+    }
   }
 }
