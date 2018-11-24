@@ -1,0 +1,27 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  Websitebucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      AccessControl: PublicReadWrite
+      BucketName: 1day-release.com
+      Tags:
+        - Key: Name
+          Value: 1day-release.com
+      WebsiteConfiguration:
+        IndexDocument: index.html
+        ErrorDocument: error.html
+
+  WebsitebucketPolicy:
+    Type: 'AWS::S3::BucketPolicy'
+    Properties:
+      Bucket:
+        Ref: Websitebucket
+      PolicyDocument:
+        Statement:
+          - Action:
+              - 's3:GetObject'
+            Effect: 'Allow'
+            Resource:
+              - 'arn:aws:s3:::1day-release.com/*'
+            Principal: '*'
