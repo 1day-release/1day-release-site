@@ -16,7 +16,8 @@ Resources:
               HttpErrorCodeReturnedEquals: '404'
             RedirectRule:
               HostName: 1day-release.com
-              ReplaceKeyPrefixWith: '#!/'
+              Protocol: https
+              ReplaceKeyPrefixWith: '#!'
 
   WebsitebucketPolicy:
     Type: 'AWS::S3::BucketPolicy'
