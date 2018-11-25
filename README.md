@@ -1,19 +1,19 @@
 # 1day-release-site
 ## Components
-- header
-  - logo
-  - menu
-  - loop-text
-  - typing-text
-- about
-- acticivies
-  - slide-articles
+- Header 
+  - Logo
+  - Menu
+  - LoopText
+  - TypingText
+- About
+- Activities
+  - SlideArticles
 - products
-  - slide-products
-- members
-  - member
-- footer
-  - typing-text
-  - sitemap
-  - goto-pagetop
-  - copyright
+  - SlideProducts
+- Members
+  - Member
+- Footer
+  - TypingText
+  - Sitemap
+  - GotoPagetop
+  - Copyright
