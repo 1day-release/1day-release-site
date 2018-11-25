@@ -18,20 +18,20 @@
   <div class="l-header">
     <header>
       <div class="wrap">
-        <div class="menu-container">
+        <div class="menu-container js-menu-container">
           <h1 class="site-logo">
             <a href="#"><img src="./images/logo.png" alt="1Day Release"></a>
           </h1>
-          <div class="menu text-uppercase js-menu-container">
+          <div class="menu text-uppercase">
+            <a class="menu-button js-menu-toggle" href="#">
+              <span class="menu-button-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+              <span class="menu-button-text">Menu</span>
+            </a>
             <nav>
-              <a class="menu-button js-menu-toggle" href="#">
-                <span class="menu-button-icon">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </span>
-                <span class="menu-button-text">Menu</span>
-              </a>
               <ul class="menu-list text-uppercase js-menu-item">
                 <li><a class="js-page-scroll" href="#about">About</a></li>
                 <li><a class="js-page-scroll" href="#activity">Activity<br>Record</a></li>
@@ -41,6 +41,7 @@
               </ul>
             </nav>
           </div>
+          <div class="cover"></div>
         </div>
         <div class="contents">
           <div class="hero">
@@ -51,7 +52,7 @@
             <p class="hero-catch">
               <small><span class="text-color-accent">1Day</span>でリリースする。</small>
             </p>
-            <p class="hero-updated">
+            <p class="hero-updated pc">
               <span class="text-uppercase text-color-accent">Activity Record :</span><br>
               <time datetime="2018-00-00">2018/00/00</time> - <span class="">今日はタスク管理サービスを</span>
             </p>
