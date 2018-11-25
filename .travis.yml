@@ -25,6 +25,5 @@ deploy:
     skip_cleanup: true
     on:
       branch: develop
-
 after_deploy:
   - aws s3 sync dist/. s3://1day-release.com
