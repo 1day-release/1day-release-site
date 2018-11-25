@@ -20,7 +20,7 @@ deploy:
     secret_access_key: '$AWS_SECRET_ACCESS_KEY'
     bucket: 1day-release.com
     region: ap-northeast-1
-    local_dir: dist
+    local_dir: src/vue-cli3/dist
     endpoint: 1day-release.com.s3-website-ap-northeast-1.amazonaws.com
     skip_cleanup: true
     on:
