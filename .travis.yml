@@ -27,4 +27,4 @@ deploy:
       branch: develop
 
 after_deploy:
-  - aws s3 sync dist/. s3://1day-release.com
+  - aws s3 sync dist/. http://1day-release.com.s3-website-ap-northeast-1.amazonaws.com
