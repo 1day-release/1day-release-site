@@ -28,22 +28,4 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./styles/_variables";
-
-// Mixin & Animate
-// ===============================================
-@import "./styles/mixin/_placeholdercolor.scss";
-@import "./styles/_animate";
-
-// Layout
-// ===============================================
-@import "./styles/_base";
-@import "./styles/_text";
-
-// Components
-// ===============================================
-@import "./styles/components/_header.scss";
-@import "./styles/components/_menu.scss";
-@import "./styles/components/_hero.scss";
-@import "./styles/components/_footer.scss";
 </style>
