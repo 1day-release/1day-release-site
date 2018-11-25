@@ -28,4 +28,4 @@ deploy:
       branch: develop
 
 notifications:
-  slack: myms-kitchen:DbnFmFIINxve2VEQvb7H0Yd3
+  slack: myms-kitchen:rFoTHBx7odRzpHllxfkalQJ5
