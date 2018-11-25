@@ -1,7 +1,7 @@
 <template>
-  <div id="activity" class="">
+  <div id="activity">
     <section>
-      <h3 class="">Activity Record.</h3>
+      <h2 class="">Activity Record.</h2>
       <div class="js-carousels-container">
         <ul class="activity-list js-carousels-list">
           <li class="js-carousels-item">

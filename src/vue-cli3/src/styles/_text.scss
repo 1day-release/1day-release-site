@@ -19,3 +19,18 @@
   font-family: $ff-mono;
   letter-spacing: 0.2em;
 }
+
+%typewrite {
+  &::after {
+    content: "";
+    position: relative;
+    left: -10px;
+    display: inline-block;
+    height: 1.0em;
+    width: 15px;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 8px;
+    vertical-align: bottom;
+    animation: blink 1.3s linear none infinite;
+  }
+}

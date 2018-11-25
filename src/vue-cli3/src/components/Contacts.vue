@@ -5,7 +5,7 @@
         <section>
           <h2 class="section-title">Contact<span class="text-color-accent">.</span></h2>
           <p class="mail-text">
-          <a class="" href="mailto:support@1day-release.com">support@1day-release.com</a>
+            <a class="" href="mailto:support@1day-release.com">support@1day-release.com</a>
           </p>
           <ul class="center-list">
             <li>

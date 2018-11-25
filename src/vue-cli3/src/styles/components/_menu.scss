@@ -31,102 +31,88 @@
 
   &-container {
     position: fixed;
+    overflow: hidden;
     z-index: 40;
     top: 0;
     left: 0;
     right: 0;
     padding: $margin;
     margin: 0 auto;
-    background-color: #000;
-    @extend %cover;
-    transition-duration: 1.0s;
+    transition-duration: $duration;
 
     @media #{$device-l} {
     }
 
-    &.is-hide {
-      top: -100%;
-    }
-
-    &::before {
-      content: "";
+    .cover {
       position: absolute;
       z-index: 1;
-      top: 0;
-      left: 0;
-      width: 100vw;
+      bottom: inherit;
       height: 100vh;
+      margin: 0 auto;
       background-color: #000;
-      @extend %cover;
-
-      opacity: 0;
-      pointer-events: none;
-
-      @media #{$device-l} {
-        background-size: 180px 1px;
-      }
     }
-  }
 
-  @at-root #container.is-open {
-    overflow: hidden;
+    &.is-hide {
+      top: -85px;
+      transition-duration: 0.8s;
 
-    .menu {
-      &-container {
+      @media #{$device-l} {}
+    }
+
+    &.is-open {
+      overflow: visible;
+
+      .cover {
+        pointer-events: auto;
+      }
+
+      .menu {
 
         @media #{$device-l} {
         }
 
-        &::before {
-          opacity: 1;
-          pointer-events: auto;
-        }
-      }
+        &-button {
+          flex-direction: row-reverse;
 
-      @media #{$device-l} {
-      }
+          @media #{$device-l} {
+          }
 
-      &-button {
-        flex-direction: row-reverse;
+          &-icon {
+            width: 12px;
+            height: 12px;
+            margin-right: 0;
+            margin-left: 15px;
 
-        @media #{$device-l} {
-        }
+            >span {
+              width: 140%;
+              margin: 0;
 
-        &-icon {
-          width: 12px;
-          height: 12px;
-          margin-right: 0;
-          margin-left: 15px;
+              &:nth-child(1) {
+                right: inherit;
+                transform: rotate(45deg);
+                transform-origin: 0 50%;
+              }
 
-          >span {
-            width: 140%;
-            margin: 0;
+              &:nth-child(2) {
+                opacity: 0;
+              }
 
-            &:nth-child(1) {
-              right: inherit;
-              transform: rotate(45deg);
-              transform-origin: 0 50%;
-            }
-
-            &:nth-child(2) {
-              opacity: 0;
-            }
-
-            &:nth-child(3) {
-              top: 0;
-              bottom: inherit;
-              transform: rotate(-45deg);
-              transform-origin: 100% 50%;
+              &:nth-child(3) {
+                top: 0;
+                bottom: inherit;
+                transform: rotate(-45deg);
+                transform-origin: 100% 50%;
+              }
             }
           }
         }
-      }
 
-      &-list {
-        opacity: 1;
-        pointer-events: auto;
+        &-list {
+          opacity: 1;
+          pointer-events: auto;
 
-        @media #{$device-l} {
+          @media #{$device-l} {
+          }
         }
       }
     }

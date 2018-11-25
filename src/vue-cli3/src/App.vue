@@ -3,6 +3,7 @@
     <!-- <div id="container" class="is-open"> -->
     <div id="container">
       <router-view/>
+      <div class="cover"></div>
     </div>
   </div>
 </template>
@@ -29,12 +30,20 @@ export default {
 <style lang="scss">
 @import "./styles/_variables";
 
-// Mixin
+// Mixin & Animate
 // ===============================================
 @import "./styles/mixin/_placeholdercolor.scss";
+@import "./styles/_animate";
 
 // Layout
 // ===============================================
 @import "./styles/_base";
 @import "./styles/_text";
+
+// Components
+// ===============================================
+@import "./styles/components/_header.scss";
+@import "./styles/components/_menu.scss";
+@import "./styles/components/_hero.scss";
+@import "./styles/components/_footer.scss";
 </style>

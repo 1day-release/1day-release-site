@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div>
     <Header />
     <Main>
       <About />
@@ -9,7 +9,6 @@
       <Contacts />
     </Main>
     <Footer />
-    <Decorations />
   </div>
 </template>
 
@@ -24,7 +23,6 @@ import Products from '@/components/Products.vue'
 import Members from '@/components/Members.vue'
 import Contacts from '@/components/Contacts.vue'
 import Footer from '@/components/Footer.vue'
-import Decorations from '@/components/Decorations.vue'
 
 export default {
   name: 'home',
@@ -36,8 +34,7 @@ export default {
     Products,
     Members,
     Contacts,
-    Footer,
-    Decorations
+    Footer
   }
 }
 </script>

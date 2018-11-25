@@ -4,8 +4,8 @@
       <div class="contents">
         <div class="wrap">
           <p class="footer-catch is-typewrite js-typewriter">
-          <span class="color-text-accent">E</span>nrich your 1day.<br>
-          <span class="color-text-accent">E</span>njoy your 1day.
+            <span class="color-text-accent">E</span>nrich your 1day.<br>
+            <span class="color-text-accent">E</span>njoy your 1day.
           </p>
           <ul class="">
             <li><a class="js-page-scroll" href="#about">About</a></li>
@@ -15,10 +15,10 @@
             <li><a class="js-page-scroll" href="#contact">Contact</a></li>
           </ul>
           <p class="page-scroll">
-          <a class="js-page-scroll" href="#">Go To Top</a>
+            <a class="js-page-scroll" href="#">Go To Top</a>
           </p>
           <p class="copyright">
-          <small>&copy; 2018 1Day Release. All rights reserved.</small>
+            <small>&copy; 2018 1Day Release. All rights reserved.</small>
           </p>
         </div>
       </div>

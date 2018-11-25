@@ -34,7 +34,7 @@
         </section>
       </div>
     </div>
-    <div class="background-image" style="background-image: url(../assets/);"></div>
+    <div class="background-image" style="background-image: url(./images/);"></div>
   </div>
 </template>
 

@@ -8,7 +8,7 @@
             <li>
               <div class="member">
                 <div class="member-img">
-                  <img src="../assets/member_bg.jpg" alt="">
+                  <img src="./images/member_hiroshi.jpg" alt="">
                 </div>
                 <p class="member-name">Hiroshi Iwabuchi</p>
                 <p class="member-position">Frontend-Engineer</p>
@@ -18,7 +18,7 @@
             <li>
               <div class="member">
                 <div class="member-img">
-                  <img src="../assets/member_bg.jpg" alt="">
+                  <img src="./images/member_ryoju.jpg" alt="">
                 </div>
                 <p class="member-name">Ryoju Ohata</p>
                 <p class="member-position">Pasionate-Engineer</p>
@@ -28,7 +28,7 @@
             <li>
               <div class="member">
                 <div class="member-img">
-                  <img src="../assets/member_bg.jpg" alt="">
+                  <img src="./images/member_.jpg" alt="">
                 </div>
                 <p class="member-name"></p>
                 <p class="member-position">Designer</p>
@@ -38,7 +38,7 @@
             <li>
               <div class="member">
                 <div class="member-img">
-                  <img src="../assets/member_bg.jpg" alt="">
+                  <img src="./images/member_.jpg" alt="">
                 </div>
                 <p class="member-name"></p>
                 <p class="member-position">Frontend-Engineer</p>
@@ -48,7 +48,7 @@
             <li>
               <div class="member">
                 <div class="member-img">
-                  <img src="../assets/member_bg.jpg" alt="">
+                  <img src="./images/member_.jpg" alt="">
                 </div>
                 <p class="member-name"></p>
                 <p class="member-position">Director</p>
@@ -58,7 +58,7 @@
             <li>
               <div class="member">
                 <div class="member-img">
-                  <img src="../assets/member_bg.jpg" alt="">
+                  <img src="./images/member_.jpg" alt="">
                 </div>
                 <p class="member-name"></p>
                 <p class="member-position">Backend-Engineer</p>
@@ -69,7 +69,7 @@
         </section>
       </div>
     </div>
-    <div class="background-image" style="background-image: url(../assets/);"></div>
+    <div class="background-image" style="background-image: url(./images/);"></div>
   </div>
 </template>
 
