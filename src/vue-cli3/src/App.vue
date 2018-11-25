@@ -1,15 +1,18 @@
 <template>
   <div id="app">
-    <router-view/>
+    <!-- <div id="container" class="is-open"> -->
+    <div id="container">
+      <router-view/>
+    </div>
   </div>
 </template>
 
 <script>
 
 export default {
-  methods : {
+  methods: {
     setPageMeta (to) {
-      document.title = ((to.meta.title) ? to.meta.title + ' | ' : '') + '1Day Release';
+      document.title = ((to.meta.title) ? to.meta.title + ' | ' : '') + '1Day Release'
     }
   },
   watch: {
@@ -24,4 +27,14 @@ export default {
 </script>
 
 <style lang="scss">
+@import "./styles/_variables";
+
+// Mixin
+// ===============================================
+@import "./styles/mixin/_placeholdercolor.scss";
+
+// Layout
+// ===============================================
+@import "./styles/_base";
+@import "./styles/_text";
 </style>

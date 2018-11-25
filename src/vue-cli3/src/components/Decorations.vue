@@ -1,11 +1,10 @@
 <template>
-  <div>
-  </div>
+  <div class="cover"></div>
 </template>
 
 <script>
 export default {
-  name: 'GlobalNavigation',
+  name: 'Decorations',
   props: {
   }
 }

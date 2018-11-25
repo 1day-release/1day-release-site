@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+// ***********************************************
+//  Text
+// ***********************************************
+.text {
+  &-uppercase {
+    text-transform: uppercase;
+  }
+
+  &-color {
+    &-accent {
+      color: map-get($color-brand, "accent");
+    }
+  }
+}
+
+%mono {
+  font-family: $ff-mono;
+  letter-spacing: 0.2em;
+}

@@ -5,7 +5,7 @@
 
 <script>
 export default {
-  name: 'GlobalNavigation',
+  name: 'LoopText',
   props: {
   }
 }

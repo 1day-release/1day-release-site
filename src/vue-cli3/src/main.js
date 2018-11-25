@@ -12,6 +12,7 @@ import 'source-code-pro/source-code-pro.css'
 
 Vue.use(VueResource)
 Vue.use(VueMoment)
+// Vue.use(VueAnalytics)
 
 Vue.config.productionTip = false
 
