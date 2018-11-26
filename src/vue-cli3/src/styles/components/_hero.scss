@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+// ***********************************************
+//  Hero
+// ***********************************************
+.hero {
+
+  @media #{$device-l} {
+  }
+
+  &-catch {
+
+    @media #{$device-l} {
+    }
+
+    &.is-typewrite {
+      line-height: 2.0;
+      font-family: $ff-mono;
+      letter-spacing: 0.15em;
+      font-size: 1.8rem;
+      font-weight: bold;
+      white-space: nowrap;
+      @extend %typewrite;
+    }
+
+    small {
+      font-size: 1.2rem;
+      font-weight: bold;
+      letter-spacing: 0.6em;
+    }
+  }
+
+  &-catch {
+
+    @media #{$device-l} {
+    }
+  }
+}
