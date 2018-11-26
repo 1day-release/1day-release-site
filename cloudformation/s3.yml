@@ -1,13 +1,40 @@
 AWSTemplateFormatVersion: '2010-09-09'
+
+Parameters:
+  Environment:
+    Description: Environment
+    Type: String
+    Default: dev
+    AllowedValues:
+      - dev
+      - stg
+      - prd
+Conditions:
+  IsProduction: !Equals [!Ref Environment, prd]
+  IsStaging: !Equals [!Ref Environment, stg]
+  IsDevelopment: !Equals [!Ref Environment, dev]
+
 Resources:
   Websitebucket:
     Type: 'AWS::S3::Bucket'
     Properties:
       AccessControl: PublicReadWrite
-      BucketName: 1day-release.com
+      BucketName: !If
+        - IsProduction
+        - '1day-release.com'
+        - !Join
+          - '.'
+          - - !Ref Environment
+            - '1day-release.com'
       Tags:
         - Key: Name
-          Value: 1day-release.com
+          Value: !If
+            - IsProduction
+            - '1day-release.com'
+            - !Join
+              - '.'
+              - - !Ref Environment
+                - '1day-release.com'
       WebsiteConfiguration:
         IndexDocument: index.html
         ErrorDocument: error.html
@@ -15,7 +42,16 @@ Resources:
           - RoutingRuleCondition:
               HttpErrorCodeReturnedEquals: '404'
             RedirectRule:
-              HostName: 1day-release.com
+              HostName: !If
+                - IsProduction
+                - '1day-release.com'
+                - !If
+                  - IsStaging
+                  - 'stg.1day-release.com'
+                  - !If
+                    - IsDevelopment
+                    - 'dev.1day-release.com.s3-website-ap-northeast-1.amazonaws.com'
+                    - ''
               Protocol: https
               ReplaceKeyPrefixWith: '#!'
 
@@ -30,5 +66,10 @@ Resources:
               - 's3:GetObject'
             Effect: 'Allow'
             Resource:
-              - 'arn:aws:s3:::1day-release.com/*'
+              - !Join
+                - ''
+                - - !GetAtt
+                    - Websitebucket
+                    - Arn
+                  - /*
             Principal: '*'
