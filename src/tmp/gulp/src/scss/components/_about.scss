@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+// ***********************************************
+//  About
+// ***********************************************
+
+#about{
+    position: relative;
+    margin-bottom: 100px;
+    .section-title{
+        margin-bottom: 50px;
+    }
+    .about-text{
+        margin-left: 13%;
+        line-height: 2.5em;
+        &:first-of-type::after{
+            content: "";
+            display: block;
+            width: 50%;
+            height: 1px;
+            margin: 50px 0;
+            background-color: #fff;
+        }
+    }
+    .background-image{
+        position: absolute;
+        width: 83%;
+        padding-bottom: 36%;
+        right: 0;
+        top: 50px;
+    }
+}
