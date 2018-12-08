@@ -23,4 +23,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  @import "../styles/components/_activity.scss";
 </style>

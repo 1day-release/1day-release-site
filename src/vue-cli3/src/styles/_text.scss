@@ -15,6 +15,18 @@
   }
 }
 
+.section-title {
+  font-family: $ff-mono;
+  font-weight: bold;
+  font-size: 4.0rem;
+  letter-spacing: 0.3em;
+  white-space: nowrap;
+
+  &:first-letter {
+    font-size: 7.0rem;
+  }
+}
+
 %mono {
   font-family: $ff-mono;
   letter-spacing: 0.2em;
@@ -24,7 +36,6 @@
   &::after {
     content: "";
     position: relative;
-    left: -10px;
     display: inline-block;
     height: 1.0em;
     width: 15px;

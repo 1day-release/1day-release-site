@@ -4,7 +4,7 @@
       <div class="wrap">
         <section>
           <h2 class="section-title"><span class="text-color-accent">A</span>bout.</h2>
-          <p class="">
+          <p class="about-text">
             「1dayでサービスを作る」<br>
             1day-releaseはその名の通り、アイデアブレストから実装までサービス制作のフローを1日で行い、プロダクトを完成させる取り組みです。<br>
             実際のサービス開発フローに乗っ取り、ディレクター・デザイナー・エンジニアのチームで制作を行っています。<br>
@@ -12,7 +12,7 @@
             「個人の技能を高める」「アイデアを実現させる」それぞれが目標を掲げ、1日という限られた時間でどこまで良いサービスを作ることが出来るのか。<br>
             ぼくたちは挑戦していきます。
           </p>
-          <p class="">
+          <p class="about-text is-english">
             " Create a service on 1 day "<br>
             As the name implies, 1day-release is an effort to complete the product by conducting the flow of service creation from idea breast to implementation until the day.<br>
             It takes over the actual service development flow, and we are producing with the team of director, designer and engineer. Normally each day is working on a company and once a month, 1 day-release is done.<br>
@@ -22,7 +22,7 @@
         </section>
       </div>
     </div>
-    <div class="background-image" style="background-image: url(./images/);"></div>
+    <div class="background-image"></div>
   </div>
 </template>
 
@@ -35,4 +35,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  @import "../styles/components/_about.scss";
 </style>
