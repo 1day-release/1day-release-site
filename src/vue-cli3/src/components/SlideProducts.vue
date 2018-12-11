@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ol class="work-list clearfix js-carousels-list">
+    <ol class="work-list js-carousels-list">
       <li class="js-carousels-item">
         <a class="work" href="">
           <figure>

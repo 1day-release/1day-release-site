@@ -9,7 +9,7 @@ $directory: "./assets/";
 // Size
 // =====================================
 $sp-min-width: 320px;
-$sp-max-width: 640px;
+$sp-max-width: 750px;
 
 $pc-min-width: 1000px;
 $pc-max-width: 1080px;
@@ -75,5 +75,5 @@ $ff-mono:
 
 // Media Queries
 // =====================================
-$device-s: "screen and (max-width: 640px)";
-$device-l: "screen and (min-width: 641px)";
+$device-s: "screen and (max-width: #{$sp-max-width})";
+$device-l: "screen and (min-width: #{$sp-max-width+1})";

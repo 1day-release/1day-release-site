@@ -22,29 +22,34 @@
 
     &-list {
       &-container {
-        height: $height + 65px;
-        margin-top: 30px;
+        margin: 30px -20px 0;
+
+        @media #{$device-l} {
+        }
       }
 
       counter-reset: no;
       position: relative;
-      width: $width * 2 + $margin * 2;
-      padding-left: 63px;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      margin: 0 128px / $sp-max-width * 100% 15px;
 
       >li {
         counter-increment: no;
-        float: left;
-        width: $width;
-        margin-left: 20px;
+        flex: 0 0 auto;
+        width: 400px / $sp-max-width * 100%;
+        min-width: 200px;
+        margin-right: 20px;
 
         &:first-child {
-          margin-left: 0;
+          margin-right: 0;
         }
 
         &::before {
           content: counter(no);
           display: block;
-          padding-bottom: 20px;
+          margin-bottom: 5px;
           font-size: 3.2rem;
           font-weight: bold;
           color: #7b7b7b;
@@ -56,7 +61,7 @@
     text-decoration: none;
 
     img {
-      max-width: 100%;
+      width: 100%;
       margin-bottom: 15px;
     }
 

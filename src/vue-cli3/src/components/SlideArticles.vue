@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ul class="activity-list clearfix js-carousels-list">
+    <ul class="activity-list js-carousels-list">
       <li class="js-carousels-item">
         <a href="" class="activity">
           <time datetime="2018-00-00">2018/00/00</time>
