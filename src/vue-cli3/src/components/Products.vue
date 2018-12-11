@@ -1,16 +1,16 @@
 <template>
-  <div id="products">
+  <div id="works">
     <div class="contents">
       <div class="wrap">
         <section>
           <h2 class="section-title"><span class="text-color-accent">W</span>orks.</h2>
-          <div class="js-carousels-container">
+          <div class="work-list-container">
             <SlideProducts />
           </div>
         </section>
       </div>
     </div>
-    <div class="background-image" style="background-image: url(./images/);"></div>
+    <div class="background-image"></div>
   </div>
 </template>
 
@@ -28,4 +28,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  @import "../styles/components/_works.scss";
 </style>

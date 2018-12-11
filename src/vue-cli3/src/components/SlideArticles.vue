@@ -1,15 +1,15 @@
 <template>
   <div>
-    <ul class="activity-list js-carousels-list">
+    <ul class="activity-list clearfix js-carousels-list">
       <li class="js-carousels-item">
-        <a href="" class="activity-box">
+        <a href="" class="activity">
           <time datetime="2018-00-00">2018/00/00</time>
           <img src="../assets/record_bg.jpg" alt="">
           <p class="">大胸筋を鍛えながら、タスク管理サービスを作った結果...神展開。</p>
         </a>
       </li>
       <li class="js-carousels-item">
-        <div class="activity-box">
+        <div class="activity">
           <time datetime="2018-00-00">2018/00/00</time>
           <img src="../assets/record_bg.jpg" alt="">
           <p class="">大胸筋を鍛えながら、タスク管理サービスを作った結果...神展開。</p>

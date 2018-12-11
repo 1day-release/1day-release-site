@@ -20,7 +20,46 @@
       }
     }
 
-    @include carousel(230px, 200px, 20px);
+    $width: 230px;
+    $margin: 20px;
+
+    &-list {
+      &-container {
+        height: 265px;
+        margin-top: 30px;
+      }
+
+      position: relative;
+      width: ( $width + $margin ) * 2;
+      padding-left: 63px;
+
+      >li {
+        float: left;
+        width: $width;
+        margin-right: 20px;
+      }
+    }
+
+    color: #fff;
+    text-decoration: none;
+
+    time {
+      display: block;
+      margin-bottom: 15px;
+      font-family: $ff-mono;
+      font-size: 1.0rem;
+    }
+
+    img {
+      width: $width;
+      margin-bottom: 20px;
+    }
+
+    p {
+      line-height: 2.0;
+      font-size: 1.2rem;
+      font-family: $ff;
+    }
   }
 
 }

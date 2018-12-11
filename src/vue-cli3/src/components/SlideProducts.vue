@@ -1,10 +1,10 @@
 <template>
   <div>
-    <ol class="work-list js-carousels-list">
-      <li class="work-list js-carousels-item">
+    <ol class="work-list clearfix js-carousels-list">
+      <li class="js-carousels-item">
         <a class="work" href="">
           <figure>
-            <img src="" alt="">
+            <img src="../assets/works_photo.jpg" alt="">
             <figcaption>作業時間管理ツール - Booster</figcaption>
           </figure>
         </a>
@@ -12,7 +12,7 @@
       <li class="js-carousels-item">
         <a class="work" href="">
           <figure>
-            <img src="" alt="">
+            <img src="../assets/works_photo.jpg" alt="">
             <figcaption>作業時間管理ツール - Booster</figcaption>
           </figure>
         </a>
@@ -41,4 +41,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  @import "../styles/components/_works.scss";
 </style>

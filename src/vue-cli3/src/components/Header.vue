@@ -19,7 +19,7 @@
               <ul class="menu-list text-uppercase js-menu-item">
                 <li><a class="js-page-scroll" href="#about">About</a></li>
                 <li><a class="js-page-scroll" href="#activity">Activity<br>Record</a></li>
-                <li><a class="js-page-scroll" href="#products">Products</a></li>
+                <li><a class="js-page-scroll" href="#works">Works</a></li>
                 <li><a class="js-page-scroll" href="#member">Member</a></li>
                 <li><a class="js-page-scroll" href="#contact">Contact</a></li>
               </ul>

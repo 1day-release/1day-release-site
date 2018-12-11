@@ -10,7 +10,7 @@
           <ul class="">
             <li><a class="js-page-scroll" href="#about">About</a></li>
             <li><a class="js-page-scroll" href="#activity">Activity Record</a></li>
-            <li><a class="js-page-scroll" href="#works">Products</a></li>
+            <li><a class="js-page-scroll" href="#works">Works</a></li>
             <li><a class="js-page-scroll" href="#member">Member</a></li>
             <li><a class="js-page-scroll" href="#contact">Contact</a></li>
           </ul>
@@ -35,4 +35,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  @import "../styles/components/_footer.scss";
 </style>
