@@ -19,11 +19,15 @@
       </li>
     </ol>
     <div class="pager-container js-carousels-pager">
-      <ul class="pager-list">
-        <li></li>
-        <li></li>
-      </ul>
-      <div class="pager-bar"></div>
+      <a href="#" class="pager-button is-prev is-disabled"></a>
+      <div class="pager">
+        <ul class="pager-list clearfix">
+          <li></li>
+          <li></li>
+        </ul>
+        <div class="pager-bar" style="left:0;width:50px;"></div>
+      </div>
+      <a href="#" class="pager-button is-next"></a>
     </div>
   </div>
 </template>

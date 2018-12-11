@@ -4,95 +4,23 @@
 //  activity
 // ***********************************************
 
-#activity{
+#activity {
   margin-bottom: 100px;
 
   @media #{$device-l} {
   }
 
-  .activity-title{
-    margin: 0 45px;
-    font-size: 2.0rem;
-    font-weight: bold;
+  .activity {
+    &-title {
+      margin: 0 45px;
+      font-size: 2.0rem;
+      font-weight: bold;
 
-    @media #{$device-l} {
+      @media #{$device-l} {
+      }
     }
+
+    @include carousel(230px, 200px, 20px);
   }
 
-  @include carousel(230px, 200px, 20px);
-  // .js-carousels{
-      // &-container{
-      //     overflow: hidden;
-      //     position: relative;
-      //     margin-top: 30px;
-      //     height: 235px;
-      // }
-      // &-list{
-      //     position: absolute;
-      //     width: 470px;
-      //     left: 63px;
-      // }
-      // &-item{
-      //     width: 215px;
-      //     float: left;
-      //     margin-right: 20px;
-      //     a{
-      //         color: #fff;
-      //         text-decoration-line: none;
-      //         time{
-      //             margin-bottom: 15px;
-      //             display: block;
-      //             font-size: 1rem;
-      //             font-family: $ff-mono;
-      //         }
-      //         img{
-      //             width: 215px;
-      //             margin-bottom: 20px;
-      //         }
-      //         p{
-      //             font-size: 1.2rem;
-      //             font-family: $ff;
-      //             line-height: 2;
-      //         }
-      //     }
-      // }
-      // &-container .pager-container{
-      //     position: absolute;
-      //     left: 20px;
-      //     bottom: 5px;
-      //     .pager-list{
-      //         height: 22px;
-      //         padding: 0 35px;
-      //         li{
-      //             display: inline-block;
-      //             height: 2px;
-      //             width: 35px;
-      //             margin-right: 8px;
-      //             background-color: #fff;
-      //             vertical-align: -2px;
-      //             &:last-child{
-      //                 margin-right: 0;
-      //             }
-      //         }
-      //         &::after,&::before{
-      //             content: "";
-      //             display: block;
-      //             position: absolute;
-      //             width: 15px;
-      //             height: 15px;
-      //             border-left: #fff solid 2px;
-      //             border-bottom: #fff solid 2px;
-      //             bottom: 2px;
-      //         }
-      //         &::before{
-      //             left: 0;
-      //             transform: rotate(45deg)
-      //         }
-      //         &::after{
-      //             right: 0;
-      //             transform: rotate(225deg)
-      //         }
-      //     }
-      // }
-  // }
 }

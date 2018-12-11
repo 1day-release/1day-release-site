@@ -1,11 +1,13 @@
 <template>
   <div id="activity">
-    <section>
-      <h2 class="">Activity Record.</h2>
-      <div class="js-carousels-container">
-        <SlideArticles />
-      </div>
-    </section>
+    <div class="contents">
+      <section>
+        <h2 class="section-title wrap">Activity <span class="text-color-accent">R</span>ecord.</h2>
+        <div class="activity-list-container">
+          <SlideArticles />
+        </div>
+      </section>
+    </div>
   </div>
 </template>
 

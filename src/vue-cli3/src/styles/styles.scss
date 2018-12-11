@@ -4,8 +4,8 @@
 
 // Mixin & Animate
 // ===============================================
-@import "mixin/_carousel.scss";
 @import "mixin/_placeholdercolor.scss";
+@import "mixin/_carousel.scss";
 @import "_animate";
 
 
@@ -13,3 +13,4 @@
 // ===============================================
 @import "_base";
 @import "_text";
+@import "_pager";
