@@ -11,10 +11,21 @@
   background-color: map-get($color-brand, "base");
 
   @media #{$device-l} {
+    margin-bottom: 110px;
   }
 
   .contents {
     padding: 90px 0 335px;
+
+    @media #{$device-l} {
+      padding: 115px 0 150px;
+    }
+  }
+
+  .wrap {
+    @media #{$device-l} {
+      padding-left: 0;
+    }
   }
 }
 
@@ -28,9 +39,10 @@
       font-weight: bold;
       white-space: nowrap;
       @extend %typewrite;
-    }
 
-    @media #{$device-l} {
+      @media #{$device-l} {
+        font-size: 3.2rem;
+      }
     }
   }
 
@@ -40,8 +52,12 @@
     margin-top: 30px;
 
     @media #{$device-l} {
-      // display: flex;
-      // justify-content: space-betwewn;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-betwewn;
+      width: 800px;
+      padding-top: 60px;
+      margin-top: 70px;
     }
 
     &::before {
@@ -52,16 +68,27 @@
       width: 93px;
       height: 1px;
       background-color: #fff;
+
+      @media #{$device-l} {
+        width: 90px;
+      }
     }
 
     >li {
       margin-top: 20px;
 
       @media #{$device-l} {
+        width: 100px;
+        margin: 20px 0;
+        margin-right: 80px;
       }
 
       &:first-child {
         margin-top: 0;
+
+        @media #{$device-l} {
+          margin-top: 20px;
+        }
       }
     }
 
@@ -81,32 +108,70 @@
 // Page Top
 // ===========================
 .page-top {
+  $length: 290px;
+  $short: 45px;
+
   position: absolute;
-  top: 86.3%;
+  bottom: -30px;
   right: 0;
   left: 0;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  width: $short;
+  height: $length;
   margin: 0 auto;
-  width: calc(7em + 185px);
-  transform: rotate(90deg);
-  transform-origin: center bottom;
 
   @media #{$device-l} {
+    $short: 20px;
+
+    top: 0;
+    right: 40px;
+    bottom: 0;
+    left: $pc-min-width - $short;
+    // left: inherit;
+    width: $short;
+    margin: auto;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    display: block;
+    width: 1px;
+    margin: 0 auto;
+    background-color: #fff;
+    pointer-events: none;
+  }
+
+  &::before {
+    top: 40px;
+    height: 100px;
+  }
+  &::after {
+    top: 150px;
+    height: 40px;
   }
 
   >a {
-    display: block;
-    margin-left: auto;
-    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: $length;
+    height: $short;
+    margin-top: -100%;
+    text-align: right;
     font-family: $ff-mono;
     color: #fff;
     font-weight: bold;
     letter-spacing: 0.1em;
     text-decoration: none;
+    white-space: nowrap;
+    transform: rotate(90deg);
+    transform-origin: left bottom;
 
     @media #{$device-l} {
+      height: $short;
     }
 
     &::before,
@@ -123,7 +188,7 @@
       border-right: none;
       border-bottom: none;
       transform: rotate(-45deg);
-      transform-origin: center bottom;
+      transform-origin: center center;
     }
 
     &::before {
@@ -139,10 +204,30 @@
 // Copyright
 // ===========================
 .copyright {
+
   @media #{$device-l} {
+    position: fixed;
+    z-index: 40;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: $pc-min-width + 40px;
+    display: block;
+    width: 10px;
+    margin: auto;
+    text-align: center;
   }
 
   >small {
+    display: block;
+    width: 100vh;
+    @extend %mono;
+    font-size: 1.0rem;
+    color: #fff;
+    white-space: nowrap;
+    transform: rotate(90deg);
+    transform-origin: left bottom;
+
     @media #{$device-l} {
     }
   }

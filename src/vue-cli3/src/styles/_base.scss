@@ -52,6 +52,15 @@ html {
 .contents {
   position: relative;
   z-index: 30;
+
+  @media #{$device-l} {
+  }
+
+  .wrap {
+    @media #{$device-l} {
+      padding-left: 140px;
+    }
+  }
 }
 
 .background-image {
@@ -64,6 +73,7 @@ html {
   margin: 0 20px;
 
   @media #{$device-l} {
+    box-sizing: border-box;
     width: $pc-min-width;
     margin: 0 auto;
   }

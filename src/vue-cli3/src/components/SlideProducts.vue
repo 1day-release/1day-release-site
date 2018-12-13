@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ol class="work-list js-carousels-list">
+    <ul class="work-list js-carousels-list">
       <li class="js-carousels-item">
         <a class="work" href="">
           <figure>
@@ -17,7 +17,7 @@
           </figure>
         </a>
       </li>
-    </ol>
+    </ul>
     <div class="pager-container js-carousels-pager">
       <a href="#" class="pager-button is-prev is-disabled"></a>
       <div class="pager">

@@ -7,7 +7,7 @@
             <span class="text-color-accent">E</span>nrich your 1day.<br>
             <span class="text-color-accent">E</span>njoy your 1day.
           </p>
-          <ul class="footer-menu">
+          <ul class="footer-menu text-uppercase">
             <li><a class="js-page-scroll" href="#about">About</a></li>
             <li><a class="js-page-scroll" href="#activity">Activity<br>Record</a></li>
             <li><a class="js-page-scroll" href="#works">Works</a></li>

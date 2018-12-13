@@ -1,33 +1,33 @@
 <template>
   <header>
     <div class="l-header">
-      <div class="wrap">
-        <div class="menu-container js-menu-container">
-          <h1 class="site-logo">
-            <a href="#"><img src="../assets/logo.png" alt="1Day Release"></a>
-          </h1>
-          <div class="menu text-uppercase">
-            <a class="menu-button js-menu-toggle" href="#">
-              <span class="menu-button-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-              </span>
-              <span class="menu-button-text">Menu</span>
-            </a>
-            <nav>
-              <ul class="menu-list text-uppercase js-menu-item">
-                <li><a class="js-page-scroll" href="#about">About</a></li>
-                <li><a class="js-page-scroll" href="#activity">Activity<br>Record</a></li>
-                <li><a class="js-page-scroll" href="#works">Works</a></li>
-                <li><a class="js-page-scroll" href="#member">Member</a></li>
-                <li><a class="js-page-scroll" href="#contact">Contact</a></li>
-              </ul>
-            </nav>
-          </div>
-          <div class="cover"></div>
+      <div class="menu-container js-menu-container">
+        <h1 class="site-logo">
+          <a href="#"><img src="../assets/logo.png" alt="1Day Release"></a>
+        </h1>
+        <div class="menu text-uppercase">
+          <a class="menu-button js-menu-toggle" href="#">
+            <span class="menu-button-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+            <span class="menu-button-text">Menu</span>
+          </a>
+          <nav>
+            <ul class="menu-list text-uppercase js-menu-item">
+              <li><a class="js-page-scroll" href="#about">About</a></li>
+              <li><a class="js-page-scroll" href="#activity">Activity<br>Record</a></li>
+              <li><a class="js-page-scroll" href="#works">Works</a></li>
+              <li><a class="js-page-scroll" href="#member">Member</a></li>
+              <li><a class="js-page-scroll" href="#contact">Contact</a></li>
+            </ul>
+          </nav>
         </div>
-        <div class="contents">
+        <div class="cover sp"></div>
+      </div>
+      <div class="contents">
+        <div class="wrap">
           <div class="hero">
             <p class="hero-catch is-typewrite js-typewriter">
               Go beyond the <strong class="text-color-accent">limit.</strong><br>
@@ -36,10 +36,12 @@
             <p class="hero-catch">
               <small><span class="text-color-accent">1Day</span>でサービスを作る。</small>
             </p>
-            <p class="hero-updated pc">
-              <span class="text-uppercase text-color-accent">Activity Record :</span><br>
-              <time datetime="2018-00-00">2018/00/00</time> - <span class="">今日はタスク管理サービスを</span>
-            </p>
+            <dl class="hero-updated pc">
+              <dt class="text-uppercase text-color-accent">Activity Record</dt>
+              <dd class="js-scroll-text">
+                <time datetime="2018-00-00">2018/00/00</time>今日はタスク管理サービスを制作しました！
+              </dd>
+            </dl>
             <p class="hero-link text-uppercase">
               <a class="js-page-scroll" href="#about">View About</a>
             </p>
@@ -62,7 +64,16 @@ export default {
 <style scoped lang="scss">
   .l-header {
     position: relative;
-    margin: 100px 0 120px;
+
+    @media #{$device-l} {
+    }
+
+    .wrap {
+
+      @media #{$device-l} {
+        // padding: 0;
+      }
+    }
   }
 
   .site-logo {
@@ -71,6 +82,10 @@ export default {
     float: left;
     width: auto;
     height: 45px;
+
+    @media #{$device-l} {
+      height: 55px;
+    }
 
     a {
       display: block;
@@ -82,10 +97,6 @@ export default {
       display: block;
       width: auto;
       height: 100%;
-    }
-
-    @media #{$device-l} {
-      height: 55px;
     }
   }
 
@@ -104,6 +115,19 @@ export default {
       transition-duration: $duration;
 
       @media #{$device-l} {
+        $width: 100px;
+        $margin: 40px;
+
+        top: $margin;
+        right: $pc-min-width - $width;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        overflow: visible;
+        width: $width;
+        height: calc(100vh - $margin*2);
+        min-height: 500px;
+        padding: 0 $margin;
       }
 
       .cover {
@@ -138,6 +162,7 @@ export default {
             flex-direction: row-reverse;
 
             @media #{$device-l} {
+              justify-content: flex-end;
             }
 
             &-icon {
@@ -182,6 +207,7 @@ export default {
     }
 
     @media #{$device-l} {
+      margin-top: 30px;
     }
 
     &-button {
@@ -190,6 +216,7 @@ export default {
       top: 0;
       right: $margin;
       bottom: 0;
+      width: 100px;
       height: 45px;
       display: flex;
       justify-content: center;
@@ -198,6 +225,13 @@ export default {
       text-decoration: none;
 
       @media #{$device-l} {
+        $par: 55px;
+
+        position: static;
+        margin: -#{$par} 0 100px;
+        height: $par;
+        transform: rotate(90deg);
+        transform-origin: left bottom;
       }
 
       &-icon {
@@ -259,6 +293,7 @@ export default {
       flex-flow: column;
       justify-content: center;
       align-items: center;
+      overflow: hidden;
       padding-bottom: $padding;
       margin: auto;
 
@@ -266,6 +301,13 @@ export default {
       pointer-events: none;
 
       @media #{$device-l} {
+        position: absolute;
+        top: inherit;
+        right: inherit;
+        left: 40px;
+        align-items: flex-start;
+        padding: 0;
+        margin: 0;
       }
 
       >li {
@@ -283,19 +325,28 @@ export default {
         color: #fff;
         font-weight: bold;
         text-decoration: none;
+
+        @media #{$device-l} {
+          text-align: left;
+        }
       }
     }
   }
 
   .hero {
+    margin: 100px 0 120px;
 
     @media #{$device-l} {
+      position: relative;
+      padding-top: 100px;
+      margin: 40px 0 150px;
     }
 
     &-catch {
       margin: 20px 0 25px;
 
       @media #{$device-l} {
+        margin-bottom: 50px;
       }
 
       &.is-typewrite {
@@ -307,6 +358,11 @@ export default {
         font-weight: bold;
         white-space: nowrap;
         @extend %typewrite;
+
+        @media #{$device-l} {
+          margin-bottom: 20px;
+          font-size: 3.2rem;
+        }
       }
 
       small {
@@ -316,10 +372,69 @@ export default {
       }
     }
 
+    &-updated {
+      @media #{$device-l} {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        overflow: hidden;
+        width: 260px;
+        text-align: right;
+        letter-spacing: 0.15em;
+      }
+
+      dt {
+        display: block;
+        font-family: $ff-mono;
+        font-size: 1.5rem;
+        font-weight: bold;
+
+        @media #{$device-l} {
+        }
+
+        &::after {
+          content: ":";
+          margin-left: 10px;
+        }
+      }
+
+      dd {
+        position: relative;
+        display: block;
+        margin-top: 15px;
+        font-size: 1.0rem;
+        white-space: nowrap;
+
+        @media #{$device-l} {
+        }
+      }
+
+      time {
+        vertical-align: middle;
+        font-family: $ff-mono;
+
+        @media #{$device-l} {
+        }
+
+        &::after {
+          content: "";
+          position: relative;
+          top: -2px;
+          display: inline-block;
+          margin: 0 10px;
+          width: 0.5em;
+          height: 1px;
+          background-color: #fff;
+        }
+      }
+    }
+
     &-link {
       @extend %mono;
 
       @media #{$device-l} {
+        font-size: 1.4rem;
       }
 
       a {
