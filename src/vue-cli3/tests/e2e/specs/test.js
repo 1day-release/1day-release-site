@@ -5,7 +5,7 @@ el = {
   app: '#app',
   sections: {
     about: '#about',
-    activities: '#activites',
+    activities: '#activities',
     works: '#works',
     members: '#members',
     contact: '#contact',
