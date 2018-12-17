@@ -1,9 +1,9 @@
 <template>
-  <div id="member">
+  <div id="members">
     <div class="contents">
       <div class="wrap">
         <section>
-          <h2 class="section-title">Member<span class="text-color-accent">.</span></h2>
+          <h2 class="section-title">Members<span class="text-color-accent">.</span></h2>
           <ul class="member-list">
             <li>
               <Member />

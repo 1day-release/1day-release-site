@@ -9,9 +9,9 @@
           </p>
           <ul class="footer-menu text-uppercase">
             <li><a class="js-page-scroll" href="#about">About</a></li>
-            <li><a class="js-page-scroll" href="#activity">Activity<br>Record</a></li>
+            <li><a class="js-page-scroll" href="#activities">Activities<br>Records</a></li>
             <li><a class="js-page-scroll" href="#works">Works</a></li>
-            <li><a class="js-page-scroll" href="#member">Member</a></li>
+            <li><a class="js-page-scroll" href="#members">Members</a></li>
             <li><a class="js-page-scroll" href="#contact">Contact</a></li>
           </ul>
           <p class="page-top text-uppercase">
