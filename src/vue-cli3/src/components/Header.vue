@@ -125,7 +125,7 @@ export default {
         align-items: flex-start;
         overflow: visible;
         width: $width;
-        height: calc(100vh - $margin*2);
+        height: calc(100vh - #{$margin} * 2);
         min-height: 500px;
         padding: 0 $margin;
       }
