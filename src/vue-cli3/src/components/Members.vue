@@ -3,60 +3,12 @@
     <div class="contents">
       <div class="wrap">
         <section>
-          <h2 class="section-title">Member<span class="text-color-accent">.</span></h2>
+          <h2 class="section-title"><span class="first-letter">M</span>ember<span class="text-color-accent">.</span></h2>
           <ul class="member-list">
-            <li>
-              <Member />
-            </li>
-            <li>
-              <div class="member">
-                <div class="member-img">
-                  <!-- <img src="./images/member_ryoju.jpg" alt=""> -->
-                </div>
-                <p class="member-name">Ryoju Ohata</p>
-                <p class="member-position">Pasionate-Engineer</p>
-                <p class="member-description"></p>
-              </div>
-            </li>
-            <li>
-              <div class="member">
-                <div class="member-img">
-                  <!-- <img src="./images/member_.jpg" alt=""> -->
-                </div>
-                <p class="member-name"></p>
-                <p class="member-position">Designer</p>
-                <p class="member-description"></p>
-              </div>
-            </li>
-            <li>
-              <div class="member">
-                <div class="member-img">
-                  <!-- <img src="./images/member_.jpg" alt=""> -->
-                </div>
-                <p class="member-name"></p>
-                <p class="member-position">Frontend-Engineer</p>
-                <p class="member-description"></p>
-              </div>
-            </li>
-            <li>
-              <div class="member">
-                <div class="member-img">
-                  <!-- <img src="./images/member_.jpg" alt=""> -->
-                </div>
-                <p class="member-name"></p>
-                <p class="member-position">Director</p>
-                <p class="member-description"></p>
-              </div>
-            </li>
-            <li>
-              <div class="member">
-                <div class="member-img">
-                  <!-- <img src="./images/member_.jpg" alt=""> -->
-                </div>
-                <p class="member-name"></p>
-                <p class="member-position">Backend-Engineer</p>
-                <p class="member-description"></p>
-              </div>
+            <li v-for="member in members">
+              <Member
+                v-bind:member="member"
+              />
             </li>
           </ul>
         </section>
@@ -75,9 +27,25 @@ export default {
     Member
   },
   props: {
+  },
+  data:
+    function () {
+    return {
+      test:"",
+      members: [
+        {name: "Ryoju Ohata", image: require('../assets/member_bg.jpg'), position:"Pasionate-Engineer", description:""},
+        {name: "Yuya Sakai", image: require('../assets/member_bg.jpg'), position:"Designer", description:""},
+        {name: "Kirin Nakayama", image: require('../assets/member_bg.jpg'), position:"Frontend-Engineer", description:""},
+        {name: "Hiroshi Iwabuchi", image: require('../assets/member_bg.jpg'), position:"Frontend-Engineer", description:""},
+        {name: "Mayama Mayama", image: require('../assets/member_bg.jpg'), position:"Backend-Engineer", description:""},
+        {name: "Riku Niioka", image: require('../assets/member_bg.jpg'), position:"Director", description:""},
+      ]
+    }
   }
+
 }
 </script>
 
 <style scoped lang="scss">
+  @import "../styles/components/_member.scss";
 </style>

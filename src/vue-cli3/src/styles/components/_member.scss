@@ -5,7 +5,29 @@
 // ***********************************************
 
 #member{
-    .section-title .text-color-accent{
-        font-size: 4rem;
+  margin-bottom: 100px;
+  .section-title {
+    margin-bottom: 50px;
+    margin-left: 1em;
+    .first-letter{
+      display: block;
+      margin-bottom: 160px;
+      margin-left: -1em;
     }
+    .text-color-accent{
+      font-size: 4rem;
+    }
+  }
+  .member-list{
+    overflow: hidden;
+    li{
+      display: block;
+      float: left;
+      width: calc(50% - 10px);
+      margin-bottom: 30px;
+    }
+    li:nth-child(odd){
+      margin-right: 10px;
+    }
+  }
 }
