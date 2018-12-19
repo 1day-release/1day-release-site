@@ -17,9 +17,9 @@
           <nav>
             <ul class="menu-list text-uppercase js-menu-item">
               <li><a class="js-page-scroll" href="#about">About</a></li>
-              <li><a class="js-page-scroll" href="#activity">Activity<br>Record</a></li>
+              <li><a class="js-page-scroll" href="#activities">Activities<br>Records</a></li>
               <li><a class="js-page-scroll" href="#works">Works</a></li>
-              <li><a class="js-page-scroll" href="#member">Member</a></li>
+              <li><a class="js-page-scroll" href="#members">Members</a></li>
               <li><a class="js-page-scroll" href="#contact">Contact</a></li>
             </ul>
           </nav>
@@ -37,7 +37,7 @@
               <small><span class="text-color-accent">1Day</span>でサービスを作る。</small>
             </p>
             <dl class="hero-updated pc">
-              <dt class="text-uppercase text-color-accent">Activity Record</dt>
+              <dt class="text-uppercase text-color-accent">Activities Records</dt>
               <dd class="js-scroll-text">
                 <time datetime="2018-00-00">2018/00/00</time>今日はタスク管理サービスを制作しました！
               </dd>
@@ -125,7 +125,7 @@ export default {
         align-items: flex-start;
         overflow: visible;
         width: $width;
-        height: calc(100vh - $margin*2);
+        height: calc(100vh - #{$margin} * 2);
         min-height: 500px;
         padding: 0 $margin;
       }

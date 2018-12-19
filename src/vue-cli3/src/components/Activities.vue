@@ -1,8 +1,8 @@
 <template>
-  <div id="activity">
+  <div id="activities">
     <div class="contents">
       <section>
-        <h2 class="section-title wrap">Activity <span class="text-color-accent">R</span>ecord.</h2>
+        <h2 class="section-title wrap">Activities <span class="text-color-accent">R</span>ecords.</h2>
         <div class="activity-list-container">
           <SlideArticles />
         </div>
