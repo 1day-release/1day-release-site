@@ -3,7 +3,7 @@
     <div class="contents">
       <div class="wrap">
         <section>
-          <h2 class="section-title"><span class="first-letter">M</span>embers<span class="text-color-accent">.</span></h2>
+          <h2 class="section-title"><span class="first-letter">M</span><span class="decoration-line"><span></span><span></span><span></span></span>embers<span class="text-color-accent">.</span></h2>
           <ul class="member-list">
             <li v-for="member in members">
               <Member
