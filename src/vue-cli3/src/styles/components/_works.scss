@@ -5,13 +5,20 @@
 // ***********************************************
 #works {
   position: relative;
-
+  @media #{$device-l} {
+    margin-bottom: 175px;
+  }
   .background-image {
     top: 24px;
     left: 0;
     width: 313px;
     height: 124px;
     background-color: map-get($color-brand, "base");
+    @media #{$device-l} {
+      top: -60px;
+      width: 900px;
+      height: 400px;
+    }
   }
 
   .work {
@@ -23,7 +30,6 @@
     &-list {
       &-container {
         margin: 30px -20px 0;
-
         @media #{$device-l} {
         }
       }
@@ -34,14 +40,18 @@
       flex-direction: row-reverse;
       justify-content: flex-end;
       margin: 0 128px / $sp-max-width * 100% 15px;
-
+      @media #{$device-l} {
+        margin: 0 25px 60px;
+      }
       >li {
         counter-increment: no;
         flex: 0 0 auto;
         width: 400px / $sp-max-width * 100%;
         min-width: 200px;
         margin-right: 20px;
-
+        @media #{$device-l} {
+          width: 200px;
+        }
         &:first-child {
           margin-right: 0;
         }

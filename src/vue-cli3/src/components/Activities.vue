@@ -1,12 +1,14 @@
 <template>
   <div id="activities">
     <div class="contents">
-      <section>
-        <h2 class="section-title wrap">Activities <span class="text-color-accent">R</span>ecords.</h2>
-        <div class="activity-list-container">
-          <SlideArticles />
-        </div>
-      </section>
+      <div class="wrap">
+        <section>
+          <h2 class="section-title">Activities <span class="text-color-accent">R</span>ecords.</h2>
+          <div class="activity-list-container">
+            <SlideArticles />
+          </div>
+        </section>
+      </div>
     </div>
   </div>
 </template>

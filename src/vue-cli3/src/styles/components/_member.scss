@@ -10,6 +10,9 @@
     position: relative;
     margin-bottom: 50px;
     padding-left: 1.4em;
+    @media #{$device-l} {
+      margin-left: calc(50% - 1.4em);
+    }
     .first-letter{
       display: block;
       margin-bottom: 110px;
@@ -48,14 +51,23 @@
   }
   .member-list{
     overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     li{
-      display: block;
-      float: left;
       width: calc(50% - 10px);
       margin-bottom: 30px;
+      @media #{$device-l} {
+        width: calc(20% - 10px);
+        margin-right: 40px;
+        margin-bottom: 60px;
+      }
     }
     li:nth-child(odd){
       margin-right: 10px;
+      @media #{$device-l} {
+        margin-right: 40px;
+      }
     }
   }
 }

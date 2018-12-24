@@ -37,7 +37,7 @@ export default {
         {name: "Yuya Sakai", image: require('../assets/member_bg.jpg'), position:"Designer", description:""},
         {name: "Kirin Nakayama", image: require('../assets/member_bg.jpg'), position:"Frontend-Engineer", description:""},
         {name: "Hiroshi Iwabuchi", image: require('../assets/member_bg.jpg'), position:"Frontend-Engineer", description:""},
-        {name: "Mayama Mayama", image: require('../assets/member_bg.jpg'), position:"Backend-Engineer", description:""},
+        {name: "Kouhei Mayama", image: require('../assets/member_bg.jpg'), position:"Backend-Engineer", description:""},
         {name: "Riku Niioka", image: require('../assets/member_bg.jpg'), position:"Director", description:""},
       ]
     }
