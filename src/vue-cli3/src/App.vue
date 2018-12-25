@@ -3,7 +3,7 @@
     <!-- <div id="container" class="is-open"> -->
     <div id="container">
       <router-view/>
-      <div class="cover"></div>
+      <div class="cover" :style="{'background-image': `url(${require('./assets/bg_line.svg')}`}"></div>
     </div>
   </div>
 </template>
