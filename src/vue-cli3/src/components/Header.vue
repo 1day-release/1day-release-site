@@ -1,31 +1,31 @@
 <template>
   <header>
     <div class="l-header">
-      <div class="menu-container js-menu-container">
-        <h1 class="site-logo">
-          <a href="#"><img src="../assets/logo.png" alt="1Day Release"></a>
-        </h1>
-        <div class="menu text-uppercase">
-          <a class="menu-button js-menu-toggle" href="#">
-            <span class="menu-button-icon">
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
-            <span class="menu-button-text">Menu</span>
-          </a>
-          <nav>
-            <ul class="menu-list text-uppercase js-menu-item">
-              <li><a class="js-page-scroll" href="#about">About</a></li>
-              <li><a class="js-page-scroll" href="#activities">Activities<br>Records</a></li>
-              <li><a class="js-page-scroll" href="#works">Works</a></li>
-              <li><a class="js-page-scroll" href="#members">Members</a></li>
-              <li><a class="js-page-scroll" href="#contact">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
-        <div class="cover sp"></div>
-      </div>
+      <div class="menu-container js-menu-container" v-bind:class='{"is-open":isOpen}'>
+    <h1 class="site-logo">
+      <a href="#"><img src="../assets/logo.png" alt="1Day Release"></a>
+    </h1>
+    <div class="menu text-uppercase">
+      <a class="menu-button js-menu-toggle" href="" v-on:click.prevent="isOpen=!isOpen">
+        <span class="menu-button-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <span class="menu-button-text">Menu</span>
+      </a>
+      <nav>
+        <ul class="menu-list text-uppercase js-menu-item">
+          <li><a class="js-page-scroll" href="#about">About</a></li>
+          <li><a class="js-page-scroll" href="#activities">Activities<br>Records</a></li>
+          <li><a class="js-page-scroll" href="#works">Works</a></li>
+          <li><a class="js-page-scroll" href="#members">Members</a></li>
+          <li><a class="js-page-scroll" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="cover sp"></div>
+  </div>
       <div class="contents">
         <div class="wrap">
           <div class="hero">
@@ -53,10 +53,19 @@
 </template>
 
 <script>
+import Menu from './Menu.vue'
+
 export default {
   name: 'Header',
+  components: {
+  },
   props: {
     msg: String
+  },
+  data: function(){
+    return {
+      isOpen: false,
+    }
   }
 }
 </script>
@@ -148,6 +157,7 @@ export default {
 
       &.is-open {
         overflow: visible;
+        transition: all 1s;
 
         .cover {
           pointer-events: auto;
@@ -174,7 +184,7 @@ export default {
               >span {
                 width: 140%;
                 margin: 0;
-
+                transition: all 1s;
                 &:nth-child(1) {
                   right: inherit;
                   transform: rotate(45deg);
@@ -198,6 +208,7 @@ export default {
           &-list {
             opacity: 1;
             pointer-events: auto;
+            transition: all 1s;
 
             @media #{$device-l} {
             }
