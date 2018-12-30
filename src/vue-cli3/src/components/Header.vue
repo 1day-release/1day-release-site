@@ -29,10 +29,11 @@
       <div class="contents">
         <div class="wrap">
           <div class="hero">
-            <p class="hero-catch is-typewrite js-typewriter">
+            <!-- <p class="hero-catch is-typewrite js-typewriter">
               Go beyond the <strong class="text-color-accent">limit.</strong><br>
               Go beyond the <strong class="text-color-accent">1day.</strong>
-            </p>
+            </p> -->
+            <TypingText :text="text"/>
             <p class="hero-catch">
               <small><span class="text-color-accent">1Day</span>でサービスを作る。</small>
             </p>
@@ -54,10 +55,12 @@
 
 <script>
 import Menu from './Menu.vue'
+import TypingText from './TypingText.vue'
 
 export default {
   name: 'Header',
   components: {
+    TypingText
   },
   props: {
     msg: String
@@ -65,6 +68,35 @@ export default {
   data: function(){
     return {
       isOpen: false,
+      text: [
+        {
+          text: "Go beyond the ",
+          speed: 70,
+          delay: 0,
+          color: "white"
+        },
+        {
+          text: "limit.",
+          speed: 70,
+          delay: 1300,
+          color: "text-color-accent"
+        },
+        {
+          line_break: true
+        },
+        {
+          text: "Go beyond the ",
+          speed: 70,
+          delay: 2100,
+          color: "white"
+        },
+        {
+          text: "1day.",
+          speed: 70,
+          delay: 3200,
+          color: "text-color-accent"
+        },
+      ],
     }
   }
 }

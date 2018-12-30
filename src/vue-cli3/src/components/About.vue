@@ -22,14 +22,32 @@
         </section>
       </div>
     </div>
-    <div class="background-image"></div>
+    <Scrollama @step-progress="scrollHandler" :offset="1.2" :progress="true">
+      <div class="background-image step1" data-step="a" :style="{ opacity: bgOpacity }"></div>
+    </Scrollama>
   </div>
 </template>
 
 <script>
+import Scrollama from 'vue-scrollama'
+
 export default {
   name: '',
+  components: {
+    Scrollama
+  },
   props: {
+  },
+  data() {
+    return {
+      bgOpacity: 0
+    }
+  },
+  methods: {
+    scrollHandler ({progress}){
+      // console.log(progress)
+      this.bgOpacity = progress
+    }
   }
 }
 </script>

@@ -3,10 +3,7 @@
     <footer>
       <div class="contents">
         <div class="wrap">
-          <p class="footer-catch is-typewrite js-typewriter">
-            <span class="text-color-accent">E</span>nrich your 1day.<br>
-            <span class="text-color-accent">E</span>njoy your 1day.
-          </p>
+          <TypingText :text="text"/>
           <ul class="footer-menu text-uppercase">
             <li><a class="js-page-scroll" href="#about">About</a></li>
             <li><a class="js-page-scroll" href="#activities">Activities<br>Records</a></li>
@@ -27,9 +24,47 @@
 </template>
 
 <script>
+import TypingText from './TypingText.vue'
+
 export default {
   name: 'Footer',
+  components: {
+    TypingText
+  },
   props: {
+  },
+  data: function(){
+    return {
+      text: [
+        {
+          text: "E",
+          speed: 70,
+          delay: 0,
+          color: "text-color-accent"
+        },
+        {
+          text: "nrich your 1day.",
+          speed: 70,
+          delay: 200,
+          color: "white"
+        },
+        {
+          line_break: true
+        },
+        {
+          text: "E",
+          speed: 70,
+          delay: 1600,
+          color: "text-color-accent"
+        },
+        {
+          text: "njoy your 1day.",
+          speed: 70,
+          delay: 1800,
+          color: "white"
+        },
+      ],
+    }
   }
 }
 </script>
