@@ -1,21 +1,15 @@
 <template>
   <div>
     <ul class="activity-list js-carousels-list">
-      <li class="js-carousels-item">
+      <li class="js-carousels-item" v-for="(article, articleIndex) in articles" :key="articleIndex">
         <a href="" class="activity">
-          <time datetime="2018-00-00">2018/00/00</time>
-          <img src="../assets/record_bg.jpg" alt="">
-          <p class="">大胸筋を鍛えながら、タスク管理サービスを作った結果...神展開。</p>
+          <time :datetime="article.date">{{article.date || moment('YYYY-MM-DD')}}</time>
+          <img :src="article.image" alt="">
+          <p class="">{{article.title}}</p>
         </a>
       </li>
-      <li class="js-carousels-item">
-        <div class="activity">
-          <time datetime="2018-00-00">2018/00/00</time>
-          <img src="../assets/record_bg.jpg" alt="">
-          <p class="">大胸筋を鍛えながら、タスク管理サービスを作った結果...神展開。</p>
-        </div>
-      </li>
     </ul>
+    <!--
     <div class="pager-container js-carousels-pager">
       <a href="#" class="pager-button is-prev is-disabled"></a>
       <div class="pager">
@@ -27,6 +21,7 @@
       </div>
       <a href="#" class="pager-button is-next"></a>
     </div>
+    -->
   </div>
 </template>
 
@@ -34,6 +29,7 @@
 export default {
   name: 'SlideArticles',
   props: {
+    articles: Array
   }
 }
 </script>

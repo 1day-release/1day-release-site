@@ -18,7 +18,7 @@
         <ul class="menu-list text-uppercase js-menu-item">
           <li><a class="js-page-scroll" href="#about">About</a></li>
           <li><a class="js-page-scroll" href="#activities">Activities<br>Records</a></li>
-          <li><a class="js-page-scroll" href="#works">Works</a></li>
+          <li><a class="js-page-scroll" href="#works">Products</a></li>
           <li><a class="js-page-scroll" href="#members">Members</a></li>
           <li><a class="js-page-scroll" href="#contact">Contact</a></li>
         </ul>
@@ -33,10 +33,10 @@
             <p class="hero-catch">
               <small><span class="text-color-accent">1Day</span>でサービスを作る。</small>
             </p>
-            <dl class="hero-updated pc">
+            <dl class="hero-updated pc" v-if="randomActivity">
               <dt class="text-uppercase text-color-accent">Activities Records</dt>
               <dd class="js-scroll-text">
-                <time datetime="2018-00-00">2018/00/00</time>今日はタスク管理サービスを制作しました！
+              <time :datetime="randomActivity.date">{{randomActivity.date | moment('YYYY/MM/DD')}}</time>{{randomActivity.title}}
               </dd>
             </dl>
             <p class="hero-link text-uppercase">
@@ -50,7 +50,7 @@
 </template>
 
 <script>
-import Menu from './Menu.vue'
+// import Menu from './Menu.vue'
 import TypingText from './TypingText.vue'
 
 export default {
@@ -61,38 +61,44 @@ export default {
   props: {
     msg: String
   },
-  data: function(){
+  data () {
     return {
       isOpen: false,
       text: [
         {
-          text: "Go beyond the ",
+          text: 'Go beyond the ',
           speed: 70,
           delay: 0,
-          color: "white"
+          color: 'white'
         },
         {
-          text: "limit.",
+          text: 'limit.',
           speed: 70,
           delay: 1300,
-          color: "text-color-accent"
+          color: 'text-color-accent'
         },
         {
           line_break: true
         },
         {
-          text: "Go beyond the ",
+          text: 'Go beyond the ',
           speed: 70,
           delay: 2100,
-          color: "white"
+          color: 'white'
         },
         {
-          text: "1day.",
+          text: '1day.',
           speed: 70,
           delay: 3200,
-          color: "text-color-accent"
-        },
-      ],
+          color: 'text-color-accent'
+        }
+      ]
+    }
+  },
+  computed: {
+    randomActivity () {
+      if (!this.$store.getters.hasSiteinfo) return null
+      return this.getArrayRandom(this.$store.getters.siteinfo.activities)
     }
   }
 }

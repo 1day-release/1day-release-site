@@ -7,7 +7,7 @@
           <ul class="footer-menu text-uppercase">
             <li><a class="js-page-scroll" href="#about">About</a></li>
             <li><a class="js-page-scroll" href="#activities">Activities<br>Records</a></li>
-            <li><a class="js-page-scroll" href="#works">Works</a></li>
+            <li><a class="js-page-scroll" href="#works">Products</a></li>
             <li><a class="js-page-scroll" href="#members">Members</a></li>
             <li><a class="js-page-scroll" href="#contact">Contact</a></li>
           </ul>
@@ -33,37 +33,37 @@ export default {
   },
   props: {
   },
-  data: function(){
+  data () {
     return {
       text: [
         {
-          text: "E",
+          text: 'E',
           speed: 70,
           delay: 0,
-          color: "text-color-accent"
+          color: 'text-color-accent'
         },
         {
-          text: "nrich your 1day.",
+          text: 'nrich your 1day.',
           speed: 70,
           delay: 200,
-          color: "white"
+          color: 'white'
         },
         {
           line_break: true
         },
         {
-          text: "E",
+          text: 'E',
           speed: 70,
           delay: 1600,
-          color: "text-color-accent"
+          color: 'text-color-accent'
         },
         {
-          text: "njoy your 1day.",
+          text: 'njoy your 1day.',
           speed: 70,
           delay: 1800,
-          color: "white"
-        },
-      ],
+          color: 'white'
+        }
+      ]
     }
   }
 }
