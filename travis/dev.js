@@ -24,5 +24,3 @@ fs.readdir(dir, function(err, files) {
     })
   })
 })
-console.log('test')
-console.log(process.env)
