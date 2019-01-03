@@ -68,6 +68,11 @@
         left: 22px;
         width: 10px;
       }
+      &:hover::before{
+        width: 4px;
+        height: 4px;
+        border-radius: 100%;
+      }
     }
   }
 }

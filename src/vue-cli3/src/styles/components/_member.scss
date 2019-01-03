@@ -5,6 +5,7 @@
 // ***********************************************
 
 #members{
+  position: relative;
   margin: 100px 0;
   .section-title {
     position: relative;
@@ -68,6 +69,17 @@
       @media #{$device-l} {
         margin-right: 40px;
       }
+    }
+  }
+  .background-image{
+    width: 83%;
+    top: 205px;
+    right: 0;
+    padding-bottom: 36%;
+    background-image: url(".#{$directory}about_bg.jpg");
+    @media #{$device-l} {
+      width: 76%;
+      top: 326px;
     }
   }
 }

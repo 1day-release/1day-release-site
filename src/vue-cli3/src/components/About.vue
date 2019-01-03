@@ -22,7 +22,7 @@
         </section>
       </div>
     </div>
-    <Scrollama @step-progress="scrollHandler" :offset="1.2" :progress="true">
+    <Scrollama @step-progress="scrollHandler" :offset="1.3" :progress="true"  threshold:="1">
       <div class="background-image step1" data-step="a" :style="{ opacity: bgOpacity }"></div>
     </Scrollama>
   </div>
