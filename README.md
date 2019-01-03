@@ -30,6 +30,8 @@
     - 2019-01-01_記事タイトル
       - article.md
       - image.jpg
+  - members
+    - member-name.jpg
 
 ### index.json
 ```json
@@ -51,6 +53,12 @@
       "description": "説明"
     }
   ],
+  "members": [
+    {
+      "name": "Member Name",
+      "position": "Position Name",
+    }
+  ],
   "contact": {
     "email": "admin@1day-release.com"
   }
@@ -58,15 +66,18 @@
 ```
 
 ### サイト情報の取得手順
-1. ロード時、Ajaxによりindex.jsonを取得する
-1. 取得したデータをsiteinfoにStoreする
-1. siteinfo.about.textが存在する場合、Aboutのテキストとして表示する
-1. siteinfo.worksが存在する場合、配列を繰り返す
+1. ロード時、サブディレクトリがdevの場合、developブランチとして、サブディレクトリがstgの場合、stagingブランチとして、それ以外の場合masterブランチとして、https://raw.githubusercontent.com/1day-release/1day-release-site/{ブランチ}/siteinfoを基底URLとする
+2. Ajaxにより基底URL/index.jsonを取得、siteinfoとしてStoreする
+3. siteinfo.about.textが存在する場合、Aboutのテキストとして表示する
+4. siteinfo.worksが存在する場合、配列を繰り返す
     1. 値.dateを日付として、値.titleをタイトルとして、値.descriptionを説明として表示する
-    1. {値.date}_{値.title}/image.jpgとしてサムネイル画像を表示する
-    1. 記事がクリックされた場合、{値.date}_{値.title}/article.mdを取得、記事詳細を表示する
-1. siteinfo.activitiesRecordsが存在する場合、配列を繰り返す
+    2. 基底URL/works/{値.date}_{値.title}/image.jpgをサムネイル画像として表示する
+    3. 記事がクリックされた場合、基底URL/works/{値.date}_{値.title}/article.mdを取得、記事詳細を表示する
+5. siteinfo.activitiesRecordsが存在する場合、配列を繰り返す
     1. 値.dateを日付として、値.titleをタイトルとして、値.descriptionを説明として表示する
-    1. {値.date}_{値.title}/image.jpgとしてサムネイル画像を表示する
-    1. 記事がクリックされた場合、{値.date}_{値.title}/article.mdを取得、記事詳細を表示する
-1. siteinfo.contact.emailが存在する場合、Contactのメールアドレスとして表示する
+    2. 基底URL/acitivities-records/{値.date}_{値.title}/image.jpgをサムネイル画像として表示する
+    3. 記事がクリックされた場合、基底URL/acitivities-records/{値.date}_{値.title}/article.mdを取得、記事詳細を表示する
+6. siteinfo.membersが存在する場合、配列を繰り返す
+    1. 値.nameを名前として、値.titleをタイトルとして、値.descriptionを説明として表示する
+    2. 基底URL/members/{値.nameをケバブケースに変換}.jpgとして画像として表示する
+7. siteinfo.contact.emailが存在する場合、Contactのメールアドレスとして表示する
