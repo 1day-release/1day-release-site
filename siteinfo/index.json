@@ -29,12 +29,28 @@
   ],
   "members": [
     {
-      "name": "Go Rilla",
-      "position": "Gorilla gorilla"
+      "name": "Ryoju Ohata",
+      "position": "Pasionate-Engineer"
     },
     {
-      "name": "Go Rilla",
-      "position": "Gorilla gorilla"
+      "name": "Yuya Sakai",
+      "position": "Designer"
+    },
+    {
+      "name": "Kirin Nakayama",
+      "position": "Frontend-Engineer"
+    },
+    {
+      "name": "Hiroshi Iwabuchi",
+      "position": "Frontend-Engineer"
+    },
+    {
+      "name": "Kouhei Mayama",
+      "position": "Backend-Engineer"
+    },
+    {
+      "name": "Riku Niioka",
+      "position": "Director"
     }
   ],
   "contact": {
