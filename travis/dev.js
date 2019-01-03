@@ -1,1 +1,1 @@
-console.log('develop環境')
+console.log('develop')
