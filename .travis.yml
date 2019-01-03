@@ -16,7 +16,7 @@ script:
   - npm run build
 after_script:
   - cd ../../
-  - 'if [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_BRANCH" == "develop" ] && [ "$TRAVIS_TAG" == "" ]; then bash ./travis/dev.yml; fi'
+  - 'if [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_BRANCH" == "develop" ] && [ "$TRAVIS_TAG" == "" ]; then bash ./travis/dev.js; fi'
 
 notifications:
   slack:
