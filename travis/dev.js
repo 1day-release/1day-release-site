@@ -1,5 +1,6 @@
 var AWS = require('aws-sdk')
 var fs = require('fs')
+var mime = require('mime-types')
 
 AWS.config.update({
   accessKeyId: process.env.AWS_ACCESS_KEY_ID,
