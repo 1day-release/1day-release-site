@@ -10,12 +10,12 @@ branches:
     - stating
     - master
 install:
-  - npm install aws-sdk
   - cd src/vue-cli3
   - npm install
 script:
   - npm run build
 after_script:
+  - cd ../../
   - 'if [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_BRANCH" == "develop" ] && [ "$TRAVIS_TAG" == "" ]; then bash ./travis/dev.yml; fi'
 
 notifications:
