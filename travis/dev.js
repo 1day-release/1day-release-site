@@ -15,7 +15,7 @@ fs.readdir(dir, function(err, files) {
     var params = {
       Bucket: 'dev.1day-release.com',
       Key: file,
-      Body: fs.readFileSync(dir + '/' + file),
+      Body: fs.readFileSync(dir + file),
       ContentType: mime.lookup(file)
     }
     s3.putObject(params, function(err, data) {
