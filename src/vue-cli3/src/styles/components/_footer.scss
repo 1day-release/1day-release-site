@@ -98,7 +98,10 @@
       font-weight: bold;
       color: #fff;
       text-decoration: none;
-
+      transition: all .8s;
+      &:hover{
+        letter-spacing: 7px;
+      }
       @media #{$device-l} {
       }
     }

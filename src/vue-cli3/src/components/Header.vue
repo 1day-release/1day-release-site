@@ -29,10 +29,6 @@
       <div class="contents">
         <div class="wrap">
           <div class="hero">
-            <!-- <p class="hero-catch is-typewrite js-typewriter">
-              Go beyond the <strong class="text-color-accent">limit.</strong><br>
-              Go beyond the <strong class="text-color-accent">1day.</strong>
-            </p> -->
             <TypingText :text="text"/>
             <p class="hero-catch">
               <small><span class="text-color-accent">1Day</span>でサービスを作る。</small>
@@ -504,12 +500,27 @@ export default {
         &::before {
           left: 0;
           width: 16px;
+          transition: 0.3s ease 0s;
         }
-
         &::after {
           left: 22px;
           width: 10px;
+          transition: 0.3s ease 0.2s;
         }
+
+        &:hover::before,
+        &:hover::after {
+          width: 4px;
+          height: 4px;
+          border-radius: 100%;
+        }
+        &:hover::before{
+          left: 105%;
+        }
+        &:hover::after {
+          left: calc(105% + 18px);
+        }
+
       }
     }
   }
