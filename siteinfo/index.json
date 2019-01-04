@@ -1,25 +1,54 @@
 {
   "about": {
-    "text": "「1dayでサービスを作る」\n1day-releaseはその名の通り、アイデアブレストから実装までサービス制作のフローを1日で行い、プロダクトを完成させる取り組みです。\n実際のサービス開発フローに乗っ取り、ディレクター・デザイナー・エンジニアのチームで制作を行っています。\n普段はそれぞれが会社で働きながら1ヶ月に1度、1day-releaseは行われています。\n「個人の技能を高める」「アイデアを実現させる」それぞれが目標を掲げ、1日という限られた時間でどこまで良いサービスを作ることが出来るのか。\nぼくたちは挑戦していきます。"
+    "text": "「1dayでサービスを作る」\n1day-releaseはその名の通り、アイデアブレストから実装までサービス制作のフローを1日で行い、プロダクトを完成させる取り組みです。\n実際のサービス開発フローに乗っ取り、ディレクター・デザイナー・エンジニアのチームで制作を行っています。\n普段はそれぞれが会社で働きながら1ヶ月に1度、1day-releaseは行われています。\n「個人の技能を高める」「アイデアを実現させる」それぞれが目標を掲げ、1日という限られた時間でどこまで良いサービスを作ることが出来るのか。\nぼくたちは挑戦していきます。",
+    "textEn": "\" Create a service on 1 day \"\nAs the name implies, 1day-release is an effort to complete the product by conducting the flow of service creation from idea breast to implementation until the day.\nIt takes over the actual service development flow, and we are producing with the team of director, designer and engineer. Normally each day is working on a company and once a month, 1 day-release is done.\nEach \"goal\" to raise \"personal skills\" and \"to realize ideas\", how far can we make good service in a limited time of one day?\nWe will challenge."
   },
-  "works": [
+  "activities": [
     {
-      "date": "2019-01-01",
-      "title": "第8回 1Day Release in エイベックス",
-      "description": "あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。 "
+      "date": "2119-01-01",
+      "title": "第9999回 1Day Release in ジャングル 新メンバー参入！！"
+    },
+    {
+      "date": "2119-01-01",
+      "title": "第9999回 1Day Release in ジャングル 新メンバー参入！！"
     }
   ],
-  "activitiesRecords": [
+  "products": [
     {
       "date": "2019-01-01",
       "title": "Sticky",
-      "description": "あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。 "
+      "description": "驚きの粘着力"
+    },
+    {
+      "date": "2019-01-01",
+      "title": "Sticky",
+      "description": "驚きの吸着力"
     }
   ],
   "members": [
     {
-      "name": "Member Name",
-      "position": "Position Name"
+      "name": "Ryoju Ohata",
+      "position": "Pasionate-Engineer"
+    },
+    {
+      "name": "Yuya Sakai",
+      "position": "Designer"
+    },
+    {
+      "name": "Kirin Nakayama",
+      "position": "Frontend-Engineer"
+    },
+    {
+      "name": "Hiroshi Iwabuchi",
+      "position": "Frontend-Engineer"
+    },
+    {
+      "name": "Kouhei Mayama",
+      "position": "Backend-Engineer"
+    },
+    {
+      "name": "Riku Niioka",
+      "position": "Director"
     }
   ],
   "contact": {

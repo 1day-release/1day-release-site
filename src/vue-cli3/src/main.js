@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import mixin from './mixin'
 
 import VueResource from 'vue-resource'
 import VueMoment from 'vue-moment'
@@ -9,6 +10,8 @@ import VueMoment from 'vue-moment'
 
 import 'reset-css'
 import 'source-code-pro/source-code-pro.css'
+
+Vue.mixin(mixin)
 
 Vue.use(VueResource)
 Vue.use(VueMoment)

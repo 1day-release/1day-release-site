@@ -3,9 +3,9 @@
     <div class="contents">
       <div class="wrap">
         <section>
-          <h2 class="section-title"><span class="text-color-accent">W</span>orks.</h2>
+          <h2 class="section-title"><span class="text-color-accent">P</span>roducts.</h2>
           <div class="work-list-container">
-            <SlideProducts />
+            <SlideProducts v-if="$store.getters.hasSiteinfo" :products="$store.getters.siteinfo.products" />
           </div>
         </section>
       </div>
@@ -18,7 +18,7 @@
 import SlideProducts from './SlideProducts.vue'
 
 export default {
-  name: 'Activities',
+  name: 'Products',
   components: {
     SlideProducts
   },

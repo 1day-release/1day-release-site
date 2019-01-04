@@ -11,11 +11,9 @@
               <span></span>
             </span>embers
             <span class="text-color-accent">.</span></h2>
-            <ul class="member-list">
-              <li v-for="member in members" :key="member.name">
-                <Member
-                  v-bind:member="member"
-                />
+            <ul class="member-list" v-if="$store.getters.hasSiteinfo">
+              <li v-for="member in $store.getters.siteinfo.members" :key="member.name">
+                <Member :member="member" />
               </li>
             </ul>
           </section>
@@ -40,24 +38,15 @@ export default {
   },
   props: {
   },
-  data:
-    function () {
+  data () {
     return {
-      members: [
-        { name: "Ryoju Ohata", image: require('../assets/member_bg.jpg'), position:"Pasionate-Engineer", description:"" },
-        { name: "Yuya Sakai", image: require('../assets/member_bg.jpg'), position:"Designer", description:"" },
-        { name: "Kirin Nakayama", image: require('../assets/member_bg.jpg'), position:"Frontend-Engineer", description:"" },
-        { name: "Hiroshi Iwabuchi", image: require('../assets/member_bg.jpg'), position:"Frontend-Engineer", description:"" },
-        { name: "Kouhei Mayama", image: require('../assets/member_bg.jpg'), position:"Backend-Engineer", description:"" },
-        { name: "Riku Niioka", image: require('../assets/member_bg.jpg'), position:"Director", description:"" },
-      ],
       bgOpacity: 0,
       onDisplay: false
     }
   },
   methods: {
-    scrollHandler ({ progress }){
-      this.bgOpacity = progress
+    scrollHandler (progress) {
+      this.bgOpacity = progress.progress
     }
   }
 }

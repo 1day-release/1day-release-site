@@ -5,7 +5,7 @@
         <section>
           <h2 class="section-title">Activities <span class="text-color-accent">R</span>ecords.</h2>
           <div class="activity-list-container">
-            <SlideArticles />
+            <SlideArticles v-if="$store.getters.hasSiteinfo" :articles="$store.getters.siteinfo.activities" />
           </div>
         </section>
       </div>
