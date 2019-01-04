@@ -1,4 +1,4 @@
-AWSTemplateFormatVersion: '2010-09-09'
+AWSTemplateFormatVersion: "2010-09-09"
 
 Parameters:
   Environment:
@@ -16,60 +16,60 @@ Conditions:
 
 Resources:
   Websitebucket:
-    Type: 'AWS::S3::Bucket'
+    Type: "AWS::S3::Bucket"
     Properties:
       AccessControl: PublicReadWrite
       BucketName: !If
         - IsProduction
-        - '1day-release.com'
+        - "1day-release.com"
         - !Join
-          - '.'
+          - "."
           - - !Ref Environment
-            - '1day-release.com'
+            - "1day-release.com"
       Tags:
         - Key: Name
           Value: !If
             - IsProduction
-            - '1day-release.com'
+            - "1day-release.com"
             - !Join
-              - '.'
+              - "."
               - - !Ref Environment
-                - '1day-release.com'
+                - "1day-release.com"
       WebsiteConfiguration:
         IndexDocument: index.html
         ErrorDocument: error.html
         RoutingRules:
           - RoutingRuleCondition:
-              HttpErrorCodeReturnedEquals: '404'
+            HttpErrorCodeReturnedEquals: "404"
             RedirectRule:
               HostName: !If
                 - IsProduction
-                - '1day-release.com'
+                - "1day-release.com"
                 - !If
                   - IsStaging
-                  - 'stg.1day-release.com'
+                  - "stg.1day-release.com"
                   - !If
                     - IsDevelopment
-                    - 'dev.1day-release.com.s3-website-ap-northeast-1.amazonaws.com'
-                    - ''
+                    - "dev.1day-release.com"
+                    - ""
               Protocol: https
-              ReplaceKeyPrefixWith: '#!'
+              ReplaceKeyPrefixWith: "#!"
 
   WebsitebucketPolicy:
-    Type: 'AWS::S3::BucketPolicy'
+    Type: "AWS::S3::BucketPolicy"
     Properties:
       Bucket:
         Ref: Websitebucket
       PolicyDocument:
         Statement:
           - Action:
-              - 's3:GetObject'
-            Effect: 'Allow'
+              - "s3:GetObject"
+            Effect: "Allow"
             Resource:
               - !Join
-                - ''
+                - ""
                 - - !GetAtt
                     - Websitebucket
                     - Arn
                   - /*
-            Principal: '*'
+            Principal: "*"
