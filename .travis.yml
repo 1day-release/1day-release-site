@@ -3,7 +3,6 @@ node_js:
   - '10'
 dist: trusty
 sudo: false
-cache: npm
 branches:
   only:
     - develop
@@ -12,6 +11,8 @@ branches:
 install:
   - cd src/vue-cli3
   - npm install
+  - npm install aws-adk
+  - npm install mime-types
 script:
   - npm run build
 after_script:
