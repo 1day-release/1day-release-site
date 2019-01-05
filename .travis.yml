@@ -8,12 +8,8 @@ branches:
     - develop
     - stating
     - master
-install:
-  - cd src/vue-cli3
-  - npm install
-  - npm install aws-sdk
-  - npm install mime-types
 script:
+  - cd src/vue-cli3
   - npm run build
 after_script:
   - 'if [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_BRANCH" == "develop" ] && [ "$TRAVIS_TAG" == "" ]; then node ../../travis/dev.js; fi'
