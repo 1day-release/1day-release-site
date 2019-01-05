@@ -11,7 +11,7 @@ branches:
 install:
   - cd src/vue-cli3
   - npm install
-  - npm install aws-adk
+  - npm install aws-sdk
   - npm install mime-types
 script:
   - npm run build
