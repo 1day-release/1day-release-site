@@ -8,7 +8,7 @@ AWS.config.update({
   region: 'ap-northeast-1'
 })
 
-var dir = './dist/js'
+var dir = './dist/js/'
 var s3 = new AWS.S3()
 fs.readdir(dir, function(err, files) {
   if (err) throw err
