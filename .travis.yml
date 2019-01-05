@@ -3,6 +3,7 @@ node_js:
   - '10'
 dist: trusty
 sudo: false
+cache: npm
 branches:
   only:
     - develop
