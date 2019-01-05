@@ -10,7 +10,11 @@ branches:
     - master
 script:
   - cd src/vue-cli3
+  - npm install
   - npm run build
+  - cd ../../travis
+  - npm install
+  - node dev.js
 after_script:
   - 'if [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_BRANCH" == "develop" ] && [ "$TRAVIS_TAG" == "" ]; then node ../../travis/dev.js; fi'
 
