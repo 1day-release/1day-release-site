@@ -13,6 +13,7 @@ install:
   - npm install
 script:
   - npm run build
+cache: npm
 after_script:
   - 'if [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_BRANCH" == "develop" ] && [ "$TRAVIS_TAG" == "" ]; then node ../../travis/dev.js; fi'
 
