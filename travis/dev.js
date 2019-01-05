@@ -8,7 +8,7 @@ AWS.config.update({
   region: 'ap-northeast-1'
 })
 
-var dir = './dist'
+var dir = './dist/js'
 var s3 = new AWS.S3()
 fs.readdir(dir, function(err, files) {
   if (err) throw err
@@ -16,7 +16,7 @@ fs.readdir(dir, function(err, files) {
     var params = {
       Bucket: 'dev.1day-release.com',
       Key: file,
-      Body: fs.readFileSync(dir + '/' + file),
+      Body: fs.readFileSync(dir + file),
       ContentType: mime.lookup(file)
     }
     s3.putObject(params, function(err, data) {
