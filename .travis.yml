@@ -11,6 +11,7 @@ branches:
     - master
 install:
   - cd src/vue-cli3
+  - npm install
 script:
   - npm run build
 after_script:
