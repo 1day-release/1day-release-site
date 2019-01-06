@@ -8,20 +8,35 @@ AWS.config.update({
   region: 'ap-northeast-1'
 })
 
-var dir = './dist/js/'
-var s3 = new AWS.S3()
-fs.readdir(dir, function(err, files) {
-  if (err) throw err
-  files.filter(function(file) {
-    var params = {
-      Bucket: 'dev.1day-release.com',
-      Key: file,
-      Body: fs.readFileSync(dir + file),
-      ContentType: mime.lookup(file)
-    }
-    s3.putObject(params, function(err, data) {
-      if (err) console.log(err, err.stack)
-      else console.log(data)
-    })
+function put_to_s3(file) {
+  distination_path = file.replace('./dist/', '')
+  var params = {
+    Bucket: 'dev.1day-release.com',
+    Key: distination_path,
+    Body: fs.readFileSync(file),
+    ContentType: mime.lookup(file)
+  }
+
+  s3.putObject(params, function(err, data) {
+    if (err) console.log(err, err.stack)
+    else console.log(data)
   })
+}
+
+var dir = './dist'
+var s3 = new AWS.S3()
+
+const dir_files_name = fs.readdirSync(dir)
+dir_files_name.forEach(dir_file => {
+  file_path = dir + '/' + dir_file
+  if (fs.statSync(file_path).isDirectory()) {
+    // ディレクトリの場合（第二階層までしか対応していない）
+    fs.readdirSync(file_path).forEach(deep_file => {
+      console.log(file_path + '/' + deep_file)
+      put_to_s3(file_path + '/' + deep_file)
+    })
+  } else {
+    // ファイルの場合
+    put_to_s3(file_path)
+  }
 })
