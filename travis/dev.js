@@ -2,6 +2,8 @@ var AWS = require('aws-sdk')
 var fs = require('fs')
 var mime = require('mime-types')
 
+const bucket_name = 'dev.1day-release.com'
+
 AWS.config.update({
   accessKeyId: process.env.AWS_ACCESS_KEY_ID,
   secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
@@ -11,7 +13,7 @@ AWS.config.update({
 function put_to_s3(file) {
   distination_path = file.replace('./dist/', '')
   var params = {
-    Bucket: 'dev.1day-release.com',
+    Bucket: bucket_name,
     Key: distination_path,
     Body: fs.readFileSync(file),
     ContentType: mime.lookup(file)
