@@ -16,6 +16,7 @@ script:
 after_script:
   - 'if [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_BRANCH" == "develop" ] && [ "$TRAVIS_TAG" == "" ]; then node ../../travis/dev.js; fi'
   - 'if [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_BRANCH" == "staging" ] && [ "$TRAVIS_TAG" == "" ]; then node ../../travis/stg.js; fi'
+  - 'if [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_TAG" == "" ]; then node ../../travis/prd.js; fi'
 
 notifications:
   slack:
