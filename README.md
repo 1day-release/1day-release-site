@@ -1,4 +1,16 @@
 # 1day-release-site
+
+## ディレクトリ階層
+- cloudformation/: AWSのインフラストラクチャ
+- siteinfo/: サイト情報管理
+- src/: ソースコード
+  - vue-cli3: LPのソースコード
+- travis/: Travis用のデプロイコード
+- package.json: Travis用のパッケージ管理
+- package-lock.json: Travis用のパッケージバージョン管理
+- README.md: 全体的な仕様の定義
+- .travis.yml: Travisの設定
+
 ## コンポーネント定義
 - Header 
   - Logo
