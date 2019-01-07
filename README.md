@@ -1,15 +1,16 @@
 # 1day-release-site
 
 ## ディレクトリ階層
+- .gitignore: 全体的なgitの除外ファイルを記述
+- .travis.yml: Travisの設定
+- README.md: 全体的な仕様の定義
 - cloudformation/: AWSのインフラストラクチャ
+- package-lock.json: Travis用のパッケージバージョン管理
+- package.json: Travis用のパッケージ管理
 - siteinfo/: サイト情報管理
 - src/: ソースコード
   - vue-cli3: LPのソースコード
 - travis/: Travis用のデプロイコード
-- package.json: Travis用のパッケージ管理
-- package-lock.json: Travis用のパッケージバージョン管理
-- README.md: 全体的な仕様の定義
-- .travis.yml: Travisの設定
 
 ## コンポーネント定義
 - Header 
