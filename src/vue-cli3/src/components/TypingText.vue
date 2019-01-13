@@ -1,19 +1,22 @@
 <template>
-  <Scrollama @step-enter="stepEnterHandler">
+  <Scrollama @step-enter="stepEnterHandler" :offset="2">
     <div class="step1"  data-step="a">
-      <p class="catch is-typewrite js-typewriter" >
-        <template v-for="typeObj in typeText" v-if="typeObj.line_break">
-          <br/>
-        </template>
-        <template v-else>
-          <vue-typer
-            :text="typeObj.text"
-            :repeat='0'
-            :type-delay="typeObj.speed"
-            :pre-type-delay="typeObj.delay"
-            :class="typeObj.color">
-            </vue-typer>
-        </template>
+      <p class="catch is-typewrite js-typewriter">
+        <span v-for="(typeObj,index) in typeText" v-bind:key="index">
+          <template v-if="typeObj.line_break">
+            <br>
+          </template>
+
+          <template v-else>
+            <vue-typer
+              :text="typeObj.text"
+              :repeat='0'
+              :type-delay="typeObj.speed"
+              :pre-type-delay="typeObj.delay"
+              :class="typeObj.color">
+              </vue-typer>
+          </template>
+        </span>
       </p>
     </div>
   </Scrollama>
@@ -35,11 +38,12 @@ export default {
   },
   data () {
     return {
-      typeText: []
+      typeText: [{ text: ' ' }]
     }
   },
   methods: {
     stepEnterHandler ({ element, index, direction }) {
+      console.log(element, index, direction)
       this.typeText = this.text
     }
   }

@@ -207,6 +207,22 @@ export default {
 
             @media #{$device-l} {
               justify-content: flex-end;
+              &:hover{
+                .menu-button-icon > span{
+                  transition: left 0s;
+                  &:nth-child(1) {
+                    // transform: rotate(45deg);
+                    // transform-origin: 0 50%;
+                    left: -7px;
+                  }
+                  &:nth-child(3) {
+                    // transform: rotate(-45deg);
+                    // transform-origin: 100% 50%;
+                    left: -13px;
+                  }
+                }
+              }
+
             }
 
             &-icon {
@@ -218,17 +234,16 @@ export default {
               >span {
                 width: 140%;
                 margin: 0;
-                transition: all 1s;
+                transition: all .6s;
+                transition: left 0s;
                 &:nth-child(1) {
                   right: inherit;
                   transform: rotate(45deg);
                   transform-origin: 0 50%;
                 }
-
                 &:nth-child(2) {
                   opacity: 0;
                 }
-
                 &:nth-child(3) {
                   top: 0;
                   bottom: inherit;
@@ -277,8 +292,37 @@ export default {
         height: $par;
         transform: rotate(90deg);
         transform-origin: left bottom;
-      }
+        transition: 0.3s ease 0s;
 
+        &:hover{
+          width: calc(100px + 0.4rem * 1.5 );
+          .menu-button{
+            &-text{
+             letter-spacing: 0.4rem;
+             color: #00fcff;
+           }
+            &-icon{
+              >span{
+                background-color: #00fcff;
+                transition: 0.3s ease 0s;
+                &:nth-child(1) {
+                  left: 22px;
+                  transition: 0.6s ease 0s;
+                }
+                &:nth-child(2) {
+                  width: 30%;
+                  left: 18px;
+                  transition: 0.6s ease 0s;
+                  transition-delay: .1s;
+                }
+                &:nth-child(3 ) {
+                  transition-delay: .1s;
+                }
+              }
+            }
+          }
+        }
+      }
       &-icon {
         position: relative;
         width: 50px;
@@ -292,6 +336,7 @@ export default {
           position: absolute;
           height: 2px;
           background-color: #fff;
+          transition: 0.3s ease 0s;
 
           &:nth-child(1) {
             top: 0;
@@ -321,6 +366,7 @@ export default {
         color: #fff;
 
         @media #{$device-l} {
+          transition: 0.3s ease 0s;
         }
       }
     }
@@ -370,9 +416,34 @@ export default {
         color: #fff;
         font-weight: bold;
         text-decoration: none;
-
         @media #{$device-l} {
           text-align: left;
+          transition: all .8s;
+          &:hover{
+            padding-left: 50px;
+            &::after,
+            &::before{
+              opacity: 1;
+              width: 15px;
+            }
+            &::before{
+              width: 10px;
+              left: 19px;
+            }
+          }
+          &::after,
+          &::before{
+            content: "";
+            position: absolute;
+            display: block;
+            left: 0;
+            top: 50%;
+            height: 1px;
+            width: 0;
+            opacity: 0;
+            background-color: #444;
+            transition: all .8s;
+          }
         }
       }
     }
@@ -490,7 +561,11 @@ export default {
         color: #fff;
         text-decoration: none;
         font-weight: bold;
-
+        transition: all .8s;
+        &:hover{
+          letter-spacing: 0.4rem;
+          color: #00fcff;
+        }
         &::before,
         &::after {
           content: "";
@@ -519,6 +594,7 @@ export default {
           width: 4px;
           height: 4px;
           border-radius: 100%;
+          background-color: #00fcff;
         }
         &:hover::before{
           left: 105%;

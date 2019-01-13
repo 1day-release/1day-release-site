@@ -9,8 +9,7 @@
               <span></span>
               <span></span>
               <span></span>
-            </span>embers
-            <span class="text-color-accent">.</span></h2>
+            </span>ember<span class="text-color-accent">.</span></h2>
             <ul class="member-list" v-if="$store.getters.hasSiteinfo">
               <li v-for="member in $store.getters.siteinfo.members" :key="member.name">
                 <Member :member="member" />

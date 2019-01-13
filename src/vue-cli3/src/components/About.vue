@@ -3,7 +3,12 @@
     <div class="contents">
       <div class="wrap">
         <section>
-          <h2 class="section-title"><span class="text-color-accent">A</span>bout.</h2>
+          <h2 class="section-title"><span class="text-color-accent first-letter">A</span>
+            <span class="decoration-line">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>bout<span class="text-color-accent">.</span></h2>
           <p class="about-text" v-if="this.$store.getters.hasSiteinfo">
             {{this.$store.getters.siteinfo.about.text}}
           </p>
@@ -29,14 +34,13 @@ export default {
   },
   props: {
   },
-  data() {
+  data () {
     return {
       bgOpacity: 0
     }
   },
   methods: {
-    scrollHandler ({progress}){
-      // console.log(progress)
+    scrollHandler ({ progress }) {
       this.bgOpacity = progress
     }
   }

@@ -18,6 +18,10 @@
     margin-left: 13%;
     line-height: 2.5;
     letter-spacing: 0.1em;
+    @media #{$device-l} {
+      width: 650px;
+      margin-left: 200px;
+    }
 
     &:first-of-type {
 
@@ -42,5 +46,9 @@
     right: 0;
     padding-bottom: 36%;
     background-image: url(".#{$directory}about_bg.jpg");
+    @media #{$device-l} {
+      top: -50px;
+      width: 71%;
+    }
   }
 }
