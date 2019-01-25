@@ -7,6 +7,9 @@
 #members{
   position: relative;
   margin: 100px 0;
+  .wrap{
+    position: relative;
+  }
   .section-title {
     position: relative;
     margin-bottom: 50px;
@@ -85,10 +88,14 @@
     top: 190px;
     right: 0;
     padding-bottom: 36%;
-    background-image: url(".#{$directory}about_bg.jpg");
+    background-image: url(".#{$directory}member_bg.jpg");
+    background-repeat: no-repeat;
+    z-index: -1;
     @media #{$device-l} {
-      width: 76%;
+      width: 90%;
       top: 326px;
+      right: -150px;
+
     }
   }
 }

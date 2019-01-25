@@ -16,11 +16,11 @@
       </a>
       <nav>
         <ul class="menu-list text-uppercase js-menu-item">
-          <li><a class="js-page-scroll" href="#about">About</a></li>
-          <li><a class="js-page-scroll" href="#activities">Activities<br>Records</a></li>
-          <li><a class="js-page-scroll" href="#works">Products</a></li>
-          <li><a class="js-page-scroll" href="#members">Members</a></li>
-          <li><a class="js-page-scroll" href="#contact">Contact</a></li>
+          <li><a class="js-page-scroll" href="#about" v-smooth-scroll>About</a></li>
+          <li><a class="js-page-scroll" href="#activities" v-smooth-scroll>Activities<br>Records</a></li>
+          <li><a class="js-page-scroll" href="#works" v-smooth-scroll>Products</a></li>
+          <li><a class="js-page-scroll" href="#members" v-smooth-scroll>Members</a></li>
+          <!-- <li><a class="js-page-scroll" href="#contact" v-smooth-scroll>Contact</a></li> -->
         </ul>
       </nav>
     </div>
@@ -40,7 +40,7 @@
               </dd>
             </dl>
             <p class="hero-link text-uppercase">
-              <a class="js-page-scroll" href="#about">View About</a>
+              <a class="js-page-scroll" href="#about" v-smooth-scroll>View About</a>
             </p>
           </div>
         </div>
@@ -249,6 +249,7 @@ export default {
                   bottom: inherit;
                   transform: rotate(-45deg);
                   transform-origin: 100% 50%;
+                  transition: left 0s;
                 }
               }
             }

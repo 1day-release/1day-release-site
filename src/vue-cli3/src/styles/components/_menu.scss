@@ -226,16 +226,7 @@
         &:hover{
           padding-left: 45px;
         }
-        &::after,
-        &::before{
-          content: "";
-          display: block;
-          left: 0;
-          height: 1px;
-          width: 0;
-          opacity: 0;
-          transition: all .8s;
-        }
+        
       }
     }
   }
