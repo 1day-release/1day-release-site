@@ -7,24 +7,35 @@
 #members{
   position: relative;
   margin: 100px 0;
+  .wrap{
+    position: relative;
+  }
   .section-title {
     position: relative;
     margin-bottom: 50px;
     padding-left: 1.4em;
     @media #{$device-l} {
-      margin-left: calc(50% - 1.4em);
+      padding-top: 190px;
+      margin-left: calc(42% - 1.4em);
     }
     .first-letter{
       display: block;
-      margin-bottom: 110px;
-      margin-left: -1.5em;
+      margin-bottom: 115px;
+      margin-left: -1.2em;
+      @media #{$device-l} {
+        margin-left: 0;
+      }
     }
     .decoration-line{
       position: absolute;
       left: 0;
-      bottom: 0;
+      bottom: 5px;
       height: 130px;
       width: 20px;
+      @media #{$device-l} {
+        left: -40px;
+        bottom: 5px;
+      }
       span{
         position: absolute;
         display: block;
@@ -43,6 +54,7 @@
           height: 28px;
           bottom: 0;
           right: 0;
+          left: auto;
         }
       }
     }
@@ -73,13 +85,17 @@
   }
   .background-image{
     width: 83%;
-    top: 205px;
+    top: 190px;
     right: 0;
     padding-bottom: 36%;
-    background-image: url(".#{$directory}about_bg.jpg");
+    background-image: url(".#{$directory}member_bg.jpg");
+    background-repeat: no-repeat;
+    z-index: -1;
     @media #{$device-l} {
-      width: 76%;
+      width: 90%;
       top: 326px;
+      right: -150px;
+
     }
   }
 }

@@ -100,7 +100,8 @@
       text-decoration: none;
       transition: all .8s;
       &:hover{
-        letter-spacing: 7px;
+        letter-spacing: 0.4rem;
+        color: #00fcff;
       }
       @media #{$device-l} {
       }
@@ -133,7 +134,16 @@
     width: $short;
     margin: auto;
   }
-
+  &:hover{
+    &::before {
+      top: 35px;
+      height: 80px;
+    }
+    &::after {
+      top: 130px;
+      height: 32px;
+    }
+  }
   &::before,
   &::after {
     content: "";
@@ -145,6 +155,7 @@
     margin: 0 auto;
     background-color: #fff;
     pointer-events: none;
+    transition: all .8s;
   }
 
   &::before {
@@ -172,9 +183,14 @@
     white-space: nowrap;
     transform: rotate(90deg);
     transform-origin: left bottom;
-
+    transition: all .8s;
     @media #{$device-l} {
       height: $short;
+    }
+
+    &:hover{
+      letter-spacing: 0.4rem;
+      color: #00fcff;
     }
 
     &::before,
@@ -192,10 +208,15 @@
       border-bottom: none;
       transform: rotate(-45deg);
       transform-origin: center center;
+      left: 5px;
+      opacity: 0;
+      animation-name: gototop;
+      animation-duration: 2.5s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
     }
 
     &::before {
-      left: 5px;
     }
 
     &::after {

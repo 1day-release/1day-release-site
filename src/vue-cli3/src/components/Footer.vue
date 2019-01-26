@@ -12,7 +12,7 @@
             <li><a class="js-page-scroll" href="#contact">Contact</a></li>
           </ul>
           <p class="page-top text-uppercase">
-            <a class="js-page-scroll" href="#">Go To Top</a>
+            <a class="js-page-scroll" href="#app" v-smooth-scroll>Go To Top</a>
           </p>
           <p class="copyright pc">
             <small>&copy; 2018 1Day Release. All rights reserved.</small>
@@ -25,6 +25,7 @@
 
 <script>
 import TypingText from './TypingText.vue'
+// import vueSmoothScroll from 'vue-smooth-scroll'
 
 export default {
   name: 'Footer',

@@ -212,6 +212,7 @@
     }
 
     a {
+      position: relative;
       display: block;
       padding: 5px;
       line-height: 1.5;
@@ -220,6 +221,13 @@
       color: #fff;
       font-weight: bold;
       text-decoration: none;
+      transition: all 1s;
+      @media #{$device-l} {
+        &:hover{
+          padding-left: 45px;
+        }
+        
+      }
     }
   }
 }

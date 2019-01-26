@@ -3,7 +3,12 @@
     <div class="contents">
       <div class="wrap">
         <section>
-          <h2 class="section-title"><span class="text-color-accent">A</span>bout.</h2>
+          <h2 class="section-title"><span class="text-color-accent first-letter">A</span>
+            <span class="decoration-line">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>bout<span class="text-color-accent">.</span></h2>
           <p class="about-text" v-if="this.$store.getters.hasSiteinfo">
             {{this.$store.getters.siteinfo.about.text}}
           </p>
@@ -11,11 +16,11 @@
             {{this.$store.getters.siteinfo.about.textEn}}
           </p>
         </section>
-      </div>
-    </div>
     <Scrollama @step-progress="scrollHandler" :offset="1.3" :progress="true"  threshold:="1">
       <div class="background-image step1" data-step="a" :style="{ opacity: bgOpacity }"></div>
     </Scrollama>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -29,14 +34,13 @@ export default {
   },
   props: {
   },
-  data() {
+  data () {
     return {
       bgOpacity: 0
     }
   },
   methods: {
-    scrollHandler ({progress}){
-      // console.log(progress)
+    scrollHandler ({ progress }) {
       this.bgOpacity = progress
     }
   }

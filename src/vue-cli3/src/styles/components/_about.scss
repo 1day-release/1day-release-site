@@ -7,6 +7,9 @@
 #about {
   position: relative;
   margin-bottom: 100px;
+  .wrap {
+    position: relative;
+  }
   @media #{$device-l} {
     margin-bottom: 170px;
   }
@@ -18,6 +21,10 @@
     margin-left: 13%;
     line-height: 2.5;
     letter-spacing: 0.1em;
+    @media #{$device-l} {
+      width: 650px;
+      margin-left: 200px;
+    }
 
     &:first-of-type {
 
@@ -38,9 +45,17 @@
 
   .background-image {
     width: 83%;
+    max-width: 1000px;
     top: 50px;
-    right: 0;
+    right: -150px;
     padding-bottom: 36%;
     background-image: url(".#{$directory}about_bg.jpg");
+    background-repeat: no-repeat;
+    z-index: -1;
+
+    @media #{$device-l} {
+      top: -50px;
+      width: 90%;
+    }
   }
 }

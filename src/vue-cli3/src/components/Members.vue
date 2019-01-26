@@ -9,19 +9,18 @@
               <span></span>
               <span></span>
               <span></span>
-            </span>embers
-            <span class="text-color-accent">.</span></h2>
+            </span>ember<span class="text-color-accent">.</span></h2>
             <ul class="member-list" v-if="$store.getters.hasSiteinfo">
               <li v-for="member in $store.getters.siteinfo.members" :key="member.name">
                 <Member :member="member" />
               </li>
             </ul>
           </section>
-        </div>
-      </div>
       <Scrollama @step-progress="scrollHandler" :offset="1.2" :progress="true" threshold:="1">
         <div class="background-image step1" data-step="a" :style="{ opacity: bgOpacity }"></div>
       </Scrollama>
+        </div>
+      </div>
     </Scrollama>
   </div>
 </template>

@@ -16,17 +16,57 @@
 }
 
 .section-title {
+  position: relative;
   font-family: $ff-mono;
   font-weight: bold;
   font-size: 4.0rem;
   letter-spacing: 0.3em;
+
   // white-space: nowrap;
 
   @media #{$device-l} {
+    padding-left: 560px;
+    .first-letter{
+      position: absolute;
+      display: block;
+      top: -23px;
+      left: 0;
+      font-size: 7.0rem;
+      // margin-bottom: 110px;
+      // margin-left: -1.5em;
+    }
+    .decoration-line{
+      position: absolute;
+      left: 50px;
+      bottom: 11px;
+      height: 10px;
+      width: 430px;
+      margin: 0 40px;
+      span{
+        position: absolute;
+        display: block;
+        width: 440px;
+        height: 1px;
+        background-color: #fff;
+        &:nth-of-type(1){
+          width: 90px;
+          // top: 45px;
+        }
+        &:nth-of-type(2){
+          width: 305px;
+          top: 0;
+          right: 0;
+        }
+        &:nth-of-type(3){
+          width: 40px;
+          bottom: 0;
+          left: 50px;
+        }
+      }
+    }
   }
 
   &:first-letter {
-    font-size: 7.0rem;
 
     @media #{$device-l} {
     }

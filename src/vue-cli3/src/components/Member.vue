@@ -79,6 +79,7 @@ export default {
       right: 0;
       vertical-align: bottom;
       transition: all 1s;
+      transition-delay: .5s;
     }
   }
 }

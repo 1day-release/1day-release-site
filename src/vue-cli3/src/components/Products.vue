@@ -3,7 +3,13 @@
     <div class="contents">
       <div class="wrap">
         <section>
-          <h2 class="section-title"><span class="text-color-accent">P</span>roducts.</h2>
+          <!-- <h2 class="section-title"><span class="text-color-accent">P</span>roducts.</h2> -->
+          <h2 class="section-title"><span class="text-color-accent first-letter">P</span>
+            <span class="decoration-line">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>roducts.</h2>
           <div class="work-list-container">
             <SlideProducts v-if="$store.getters.hasSiteinfo" :products="$store.getters.siteinfo.products" />
           </div>

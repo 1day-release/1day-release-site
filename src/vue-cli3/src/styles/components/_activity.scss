@@ -9,15 +9,22 @@
   @media #{$device-l} {
     margin-bottom: 330px;
   }
+  .section-title{
+    @media #{$device-l} {
+      .first-letter{
+        top: 0;
+      }
+      .decoration-line{
+        bottom: 30px;
+      }
+    }
+  }
   .activity {
     &-title {
       // margin: 0 45px;
       font-size: 2.0rem;
       font-weight: bold;
-      @media #{$device-l} {
-      }
     }
-
     &-list {
       &-container {
         margin-top: 30px;
