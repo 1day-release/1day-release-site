@@ -7,12 +7,21 @@
     </h1>
     <div class="menu text-uppercase">
       <a class="menu-button js-menu-toggle" href="" v-on:click.prevent="isOpen=!isOpen">
-        <span class="menu-button-icon">
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
-        <span class="menu-button-text">Menu</span>
+        <div class="menu-button-open">
+          <span class="menu-button-open-text">Close</span>
+          <span class="menu-button-open-icon">
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div class="menu-button-close">
+          <span class="menu-button-close-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span class="menu-button-close-text">Menu</span>
+        </div>
       </a>
       <nav>
         <ul class="menu-list text-uppercase js-menu-item">
@@ -20,7 +29,7 @@
           <li><a class="js-page-scroll" href="#activities" v-smooth-scroll>Activities<br>Records</a></li>
           <li><a class="js-page-scroll" href="#works" v-smooth-scroll>Products</a></li>
           <li><a class="js-page-scroll" href="#members" v-smooth-scroll>Members</a></li>
-          <!-- <li><a class="js-page-scroll" href="#contact" v-smooth-scroll>Contact</a></li> -->
+          <li><a class="js-page-scroll" href="#contact" v-smooth-scroll>Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -168,8 +177,9 @@ export default {
         align-items: flex-start;
         overflow: visible;
         width: $width;
-        height: calc(100vh - #{$margin} * 2);
-        min-height: 500px;
+        // height: calc(100vh - #{$margin} * 2);
+        height: 200px;
+        min-height: 200px;
         padding: 0 $margin;
       }
 
@@ -204,20 +214,23 @@ export default {
 
           &-button {
             flex-direction: row-reverse;
-
+            &-close{
+              opacity: 0;
+              width: 0;
+            }
+            &-open{
+              opacity: 1;
+              width: 100%;
+            }
             @media #{$device-l} {
               justify-content: flex-end;
               &:hover{
-                .menu-button-icon > span{
+                .close .menu-button-icon > span{
                   transition: left 0s;
                   &:nth-child(1) {
-                    // transform: rotate(45deg);
-                    // transform-origin: 0 50%;
                     left: -7px;
                   }
                   &:nth-child(3) {
-                    // transform: rotate(-45deg);
-                    // transform-origin: 100% 50%;
                     left: -13px;
                   }
                 }
@@ -298,16 +311,26 @@ export default {
         &:hover{
           width: calc(100px + 0.4rem * 1.5 );
           .menu-button{
-            &-text{
-             letter-spacing: 0.4rem;
-             color: #00fcff;
-           }
+            &-close,
+            &-open{
+              &-text{
+                letter-spacing: 0.4rem;
+                color: #00fcff;
+              }
+              &-icon{
+                >span{
+                  background-color: #00fcff;
+                  transition: 0.3s ease 0s;
+                }
+              }
+            }
+
+            &-close{
             &-icon{
               >span{
-                background-color: #00fcff;
-                transition: 0.3s ease 0s;
                 &:nth-child(1) {
                   left: 22px;
+                  width: calc(100% - 22px);
                   transition: 0.6s ease 0s;
                 }
                 &:nth-child(2) {
@@ -321,53 +344,104 @@ export default {
                 }
               }
             }
+            }
           }
         }
       }
-      &-icon {
-        position: relative;
-        width: 50px;
-        height: 9px;
-        margin-right: 10px;
-
-        @media #{$device-l} {
-        }
-
-        >span {
+      &-close,
+      &-open{
+        transition: all .2s;
+        width: 100%;
+        &-icon {
           position: absolute;
-          height: 2px;
-          background-color: #fff;
-          transition: 0.3s ease 0s;
+          display: block;
+          height: 9px;
 
-          &:nth-child(1) {
-            top: 0;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
+          @media #{$device-l} {
           }
 
-          &:nth-child(2) {
-            width: 60%;
-            bottom: 0;
-            left: 0;
+          >span {
+            position: absolute;
+            height: 2px;
+            background-color: #fff;
+            transition: 0.3s ease 0s;
           }
+        }
+        &-text {
+          @extend %mono;
+          font-weight: bold;
+          font-size: 1.2rem;
+          color: #fff;
+          position: absolute;
 
-          &:nth-child(3) {
-            width: 30%;
-            bottom: 0;
-            right: 0;
+          @media #{$device-l} {
+            transition: 0.3s ease 0s;
           }
         }
       }
+      &-close{
+        &-icon {
+          width: 50px;
+          height: 9px;
+          margin-right: 10px;
+          left: 0;
+          @media #{$device-l} {
+          }
 
-      &-text {
-        @extend %mono;
-        font-weight: bold;
-        font-size: 1.2rem;
-        color: #fff;
+          >span {
 
-        @media #{$device-l} {
-          transition: 0.3s ease 0s;
+            &:nth-child(1) {
+              width:  100%;
+              top: 0;
+              left: 0;
+              right: 0;
+              margin: 0 auto;
+            }
+
+            &:nth-child(2) {
+              width: 60%;
+              bottom: 0;
+              left: 0;
+            }
+
+            &:nth-child(3) {
+              width: 30%;
+              bottom: 0;
+              right: 0;
+            }
+          }
+        }
+        &-text {
+          right: 0;
+        }
+      }
+      &-open{
+        opacity: 0;
+        width: 0;
+        &-icon {
+          width: 50px;
+          height: 9px;
+          right: 10px;
+
+          @media #{$device-l} {
+          }
+
+          >span {
+            width: 15px;
+            height: 2px;
+            top: 5px;
+
+            transition-delay: .2s;
+
+            &:nth-child(1) {
+                  right: inherit;
+                  transform: rotate(45deg);
+                }
+                &:nth-child(2) {
+                  right: inherit;
+                  transform: rotate(-45deg);
+                }
+          }
         }
       }
     }
@@ -377,7 +451,9 @@ export default {
 
       position: fixed;
       z-index: 10;
+      height: 240px;
       top: $padding;
+      top: 50%;
       right: 0;
       bottom: 0;
       left: 0;
@@ -388,15 +464,16 @@ export default {
       overflow: hidden;
       padding-bottom: $padding;
       margin: auto;
+      transform: translateY(-50%);
 
       opacity: 0;
       pointer-events: none;
 
       @media #{$device-l} {
-        position: absolute;
-        top: inherit;
+        // position: absolute;
         right: inherit;
-        left: 40px;
+        // left: 40px;
+        left: calc((100vw - 1080px) / 2 );
         align-items: flex-start;
         padding: 0;
         margin: 0;
@@ -405,16 +482,17 @@ export default {
       >li {
         position: relative;
         z-index: 30;
-        margin: 10px 0;
+        margin: 7px 0;
       }
 
       a {
         display: block;
         padding: 5px;
-        line-height: 1.5;
+        line-height: 1.8;
         text-align: center;
         @extend %mono;
         color: #fff;
+        font-size: 1.2rem;
         font-weight: bold;
         text-decoration: none;
         @media #{$device-l} {

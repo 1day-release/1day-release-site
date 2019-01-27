@@ -21,16 +21,12 @@
 </template>
 
 <script>
-import TypingText from './TypingText.vue'
 import { VueTyper } from 'vue-typer'
-
 
 export default {
   name: 'Member',
   components: {
-    TypingText,
     'vue-typer': VueTyper
-
   },
   props: ['member']
 }
@@ -53,11 +49,15 @@ export default {
   text-align: center;
   .member-name{
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+    font-family: $ff-mono;
+    font-weight: 500;
     font-size: 1.4rem;
   }
   .member-position{
     color: #585858;
+    font-family: $ff-mono;
+    font-weight: 500;
     font-size: 1.2rem;
   }
   .member-img{

@@ -44,18 +44,19 @@
   }
 
   .background-image {
-    width: 83%;
-    max-width: 1000px;
-    top: 50px;
-    right: -150px;
+    width: 88%;
+    top: 30px;
+    right: -20px;
     padding-bottom: 36%;
     background-image: url(".#{$directory}about_bg.jpg");
     background-repeat: no-repeat;
     z-index: -1;
-
+    
     @media #{$device-l} {
       top: -50px;
+      right: -150px;
       width: 90%;
+      max-width: 1000px;
     }
   }
 }

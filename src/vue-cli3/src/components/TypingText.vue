@@ -67,7 +67,7 @@ export default {
 
     &.is-typewrite {
       margin: 0 0 20px;
-      line-height: 2.0;
+      line-height: 1.7;
       font-family: $ff-mono;
       letter-spacing: 0.15em;
       font-size: 1.8rem;

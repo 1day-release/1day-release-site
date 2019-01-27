@@ -34,4 +34,7 @@ export default {
 </script>
 
 <style lang="scss">
+.cover{
+  background-image: url("./assets/bg_line.svg")
+}
 </style>

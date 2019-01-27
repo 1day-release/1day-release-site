@@ -57,7 +57,7 @@
         }
 
         &::before {
-          content: counter(no);
+          content: counter(no, decimal-leading-zero);
           display: block;
           margin-bottom: 5px;
           font-size: 3.2rem;

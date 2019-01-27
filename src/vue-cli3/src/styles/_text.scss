@@ -25,7 +25,7 @@
   // white-space: nowrap;
 
   @media #{$device-l} {
-    padding-left: 560px;
+    padding-left: 530px;
     .first-letter{
       position: absolute;
       display: block;
@@ -39,8 +39,8 @@
       position: absolute;
       left: 50px;
       bottom: 11px;
-      height: 10px;
-      width: 430px;
+      height: 12px;
+      width: 405px;
       margin: 0 40px;
       span{
         position: absolute;
