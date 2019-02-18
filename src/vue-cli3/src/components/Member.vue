@@ -8,7 +8,6 @@
         :text="member.name"
         :repeat='0'>
       </vue-typer>
-      <br>
       <vue-typer
         class="member-position"
         :text="member.position"
@@ -39,7 +38,7 @@ export default {
     color: #fff;
   }
   &.member-position .custom.char.typed{
-    color: #585858;
+    color: rgba(255, 255, 255, .5);
   }
 }
 #members .contents.active .member .member-img img{
@@ -53,18 +52,19 @@ export default {
     font-family: $ff-mono;
     font-weight: 500;
     font-size: 1.4rem;
+    margin-bottom: 15px;
   }
   .member-position{
-    color: #585858;
     font-family: $ff-mono;
     font-weight: 500;
     font-size: 1.2rem;
+    vertical-align: top;
   }
   .member-img{
     position: relative;
     overflow: hidden;
     padding-bottom: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     background-color: #fff;
     border-radius: 50%;
     &:hover img{

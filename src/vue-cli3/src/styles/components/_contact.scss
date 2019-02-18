@@ -7,9 +7,12 @@
 .contents{
   // display: none;
   margin-bottom: 120px;
+  .wrap{
+    padding-left: 0;
+  }
   .section-title{
-    margin-bottom: 40px;
-    @media #{$device-l} {
+    margin-bottom: 90px;
+  @media #{$device-l} {
       text-align: center;
       padding-left: 0;
     }
@@ -17,7 +20,7 @@
   .mail-text{
     text-align: center;
     font-family: $ff-mono;;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     @media #{$device-l} {
     }
     a{
@@ -28,8 +31,8 @@
       content: "";
       display: block;
       height: 1px;
-      width: 10%;
-      margin: 30px auto;
+      width: 35px;
+      margin: 40px auto;
       background-color: #fff;
     }
   }
@@ -48,6 +51,9 @@
       }
     }
     .sns-button{
+      @media #{$device-l} {
+        height: 165px;
+      }
       img{
         width: 100%;
       }

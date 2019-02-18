@@ -54,9 +54,11 @@ export default {
   /deep/ .vue-typer{
     &.white .custom.char.typed{
         color: #fff;
+        letter-spacing: 12px;
     }
     &.text-color-accent .custom.char.typed{
       color: #00fcff;
+      letter-spacing: 12px;
     }
   }
   /deep/ .catch {
@@ -71,7 +73,6 @@ export default {
       font-family: $ff-mono;
       letter-spacing: 0.15em;
       font-size: 1.8rem;
-      font-weight: bold;
       white-space: nowrap;
       @extend %typewrite;
 

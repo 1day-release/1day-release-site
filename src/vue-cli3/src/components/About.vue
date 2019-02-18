@@ -16,7 +16,7 @@
             {{this.$store.getters.siteinfo.about.textEn}}
           </p>
         </section>
-    <Scrollama @step-progress="scrollHandler" :offset="1.3" :progress="true"  threshold:="1">
+    <Scrollama @step-progress="scrollHandler" :offset="0.5" :progress="true"  threshold:="1">
       <div class="background-image step1" data-step="a" :style="{ opacity: bgOpacity }"></div>
     </Scrollama>
       </div>
@@ -36,12 +36,16 @@ export default {
   },
   data () {
     return {
-      bgOpacity: 0
+      bgOpacity: 1
     }
   },
   methods: {
     scrollHandler ({ progress }) {
-      this.bgOpacity = progress
+      if (1 + (progress * -1) > 0.3) {
+        this.bgOpacity = 1 + (progress * -1)
+      } else {
+        this.bgOpacity = 0.3
+      }
     }
   }
 }
