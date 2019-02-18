@@ -24,8 +24,8 @@
 }
 
 html {
-  font-family: $ff;
-  font-size: 10px;
+  font-family: $ff !important;
+  font-size: 10px !important;
 
   body {
     font-size: 1.2rem;
@@ -52,10 +52,19 @@ html {
 .contents {
   position: relative;
   z-index: 30;
+
+  @media #{$device-l} {
+  }
+
+  .wrap {
+    @media #{$device-l} {
+      padding-left: 140px;
+    }
+  }
 }
 
 .background-image {
-  position: relative;
+  position: absolute;
   z-index: 1;
   background-size: contain;
 }
@@ -64,6 +73,7 @@ html {
   margin: 0 20px;
 
   @media #{$device-l} {
+    box-sizing: border-box;
     width: $pc-min-width;
     margin: 0 auto;
   }
@@ -77,7 +87,7 @@ html {
   bottom: 0;
   left: 0;
   margin: auto;
-  // background-image: url("#{$root}bg_line.svg");
+  // background-image: url(".#{$directory}bg_line.svg");
   background-repeat: repeat;
   background-position: center top;
   background-size: 75px 1px;

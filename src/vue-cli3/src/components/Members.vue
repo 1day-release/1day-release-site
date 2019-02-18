@@ -1,83 +1,56 @@
 <template>
-  <div id="member">
-    <div class="contents">
-      <div class="wrap">
-        <section>
-          <h2 class="section-title">Member<span class="text-color-accent">.</span></h2>
-          <ul class="member-list">
-            <li>
-              <Member />
-            </li>
-            <li>
-              <div class="member">
-                <div class="member-img">
-                  <!-- <img src="./images/member_ryoju.jpg" alt=""> -->
-                </div>
-                <p class="member-name">Ryoju Ohata</p>
-                <p class="member-position">Pasionate-Engineer</p>
-                <p class="member-description"></p>
-              </div>
-            </li>
-            <li>
-              <div class="member">
-                <div class="member-img">
-                  <!-- <img src="./images/member_.jpg" alt=""> -->
-                </div>
-                <p class="member-name"></p>
-                <p class="member-position">Designer</p>
-                <p class="member-description"></p>
-              </div>
-            </li>
-            <li>
-              <div class="member">
-                <div class="member-img">
-                  <!-- <img src="./images/member_.jpg" alt=""> -->
-                </div>
-                <p class="member-name"></p>
-                <p class="member-position">Frontend-Engineer</p>
-                <p class="member-description"></p>
-              </div>
-            </li>
-            <li>
-              <div class="member">
-                <div class="member-img">
-                  <!-- <img src="./images/member_.jpg" alt=""> -->
-                </div>
-                <p class="member-name"></p>
-                <p class="member-position">Director</p>
-                <p class="member-description"></p>
-              </div>
-            </li>
-            <li>
-              <div class="member">
-                <div class="member-img">
-                  <!-- <img src="./images/member_.jpg" alt=""> -->
-                </div>
-                <p class="member-name"></p>
-                <p class="member-position">Backend-Engineer</p>
-                <p class="member-description"></p>
-              </div>
-            </li>
-          </ul>
-        </section>
+  <div id="members">
+    <Scrollama @step-enter="({ el }) => (onDisplay = true)">
+      <div class="contents" :class="{ active: onDisplay }">
+        <div class="wrap">
+          <section>
+            <h2 class="section-title"><span class="first-letter">M</span>
+            <span class="decoration-line">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>ember<span class="text-color-accent">.</span></h2>
+            <ul class="member-list" v-if="$store.getters.hasSiteinfo">
+              <li v-for="member in $store.getters.siteinfo.members" :key="member.name">
+                <Member :member="member" />
+              </li>
+            </ul>
+          </section>
+      <Scrollama @step-progress="scrollHandler" :offset="1.2" :progress="true" threshold:="1">
+        <div class="background-image step1" data-step="a" :style="{ opacity: bgOpacity }"></div>
+      </Scrollama>
+        </div>
       </div>
-    </div>
-    <div class="background-image" style="background-image: url(./images/);"></div>
+    </Scrollama>
   </div>
 </template>
 
 <script>
 import Member from './Member.vue'
+import Scrollama from 'vue-scrollama'
 
 export default {
   name: 'Members',
   components: {
-    Member
+    Member,
+    Scrollama
   },
   props: {
+  },
+  data () {
+    return {
+      bgOpacity: 0,
+      onDisplay: false
+    }
+  },
+  methods: {
+    scrollHandler (progress) {
+      this.bgOpacity = progress.progress
+    }
   }
 }
 </script>
 
 <style scoped lang="scss">
+@import "../styles/components/_member.scss";
 </style>

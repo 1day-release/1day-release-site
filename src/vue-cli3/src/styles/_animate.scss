@@ -17,3 +17,20 @@
     opacity: 1;
   }
 }
+
+@keyframes gototop {
+  0% {
+    transform: translateX(13px) rotate(-45deg);
+  }
+  10% {
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(-5px) rotate(-45deg);
+    opacity: .8;
+  }
+  100% {
+    transform: translateX(-10px) rotate(-45deg);
+    opacity: .1;
+  }
+}

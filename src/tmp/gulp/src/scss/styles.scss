@@ -6,6 +6,7 @@
 // ===============================================
 @import "mixin/_placeholdercolor.scss";
 @import "_animate";
+@import "mixin/_carousel";
 
 
 // Layout
@@ -19,4 +20,8 @@
 @import "components/_header.scss";
 @import "components/_menu.scss";
 @import "components/_hero.scss";
+@import "components/_about.scss";
+@import "components/_activity.scss";
+@import "components/_products.scss";
+@import "components/_member.scss";
 @import "components/_footer.scss";

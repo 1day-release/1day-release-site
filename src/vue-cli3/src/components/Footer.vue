@@ -3,21 +3,18 @@
     <footer>
       <div class="contents">
         <div class="wrap">
-          <p class="footer-catch is-typewrite js-typewriter">
-            <span class="color-text-accent">E</span>nrich your 1day.<br>
-            <span class="color-text-accent">E</span>njoy your 1day.
-          </p>
-          <ul class="">
+          <TypingText :text="text"/>
+          <ul class="footer-menu text-uppercase">
             <li><a class="js-page-scroll" href="#about">About</a></li>
-            <li><a class="js-page-scroll" href="#activity">Activity Record</a></li>
+            <li><a class="js-page-scroll" href="#activities">Activities<br>Records</a></li>
             <li><a class="js-page-scroll" href="#works">Products</a></li>
-            <li><a class="js-page-scroll" href="#member">Member</a></li>
+            <li><a class="js-page-scroll" href="#members">Members</a></li>
             <li><a class="js-page-scroll" href="#contact">Contact</a></li>
           </ul>
-          <p class="page-scroll">
-            <a class="js-page-scroll" href="#">Go To Top</a>
+          <p class="page-top text-uppercase">
+            <a class="js-page-scroll" href="#app" v-smooth-scroll>Go To Top</a>
           </p>
-          <p class="copyright">
+          <p class="copyright pc">
             <small>&copy; 2018 1Day Release. All rights reserved.</small>
           </p>
         </div>
@@ -27,12 +24,52 @@
 </template>
 
 <script>
+import TypingText from './TypingText.vue'
+// import vueSmoothScroll from 'vue-smooth-scroll'
+
 export default {
   name: 'Footer',
+  components: {
+    TypingText
+  },
   props: {
+  },
+  data () {
+    return {
+      text: [
+        {
+          text: 'E',
+          speed: 70,
+          delay: 0,
+          color: 'text-color-accent'
+        },
+        {
+          text: 'nrich your 1day.',
+          speed: 70,
+          delay: 200,
+          color: 'white'
+        },
+        {
+          line_break: true
+        },
+        {
+          text: 'E',
+          speed: 70,
+          delay: 1600,
+          color: 'text-color-accent'
+        },
+        {
+          text: 'njoy your 1day.',
+          speed: 70,
+          delay: 1800,
+          color: 'white'
+        }
+      ]
+    }
   }
 }
 </script>
 
 <style scoped lang="scss">
+  @import "../styles/components/_footer.scss";
 </style>

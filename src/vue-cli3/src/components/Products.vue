@@ -1,16 +1,22 @@
 <template>
-  <div id="products">
+  <div id="works">
     <div class="contents">
       <div class="wrap">
         <section>
-          <h2 class="section-title"><span class="text-color-accent">W</span>orks.</h2>
-          <div class="js-carousels-container">
-            <SlideProducts />
+          <!-- <h2 class="section-title"><span class="text-color-accent">P</span>roducts.</h2> -->
+          <h2 class="section-title"><span class="text-color-accent first-letter">P</span>
+            <span class="decoration-line">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>roducts.</h2>
+          <div class="work-list-container">
+            <SlideProducts v-if="$store.getters.hasSiteinfo" :products="$store.getters.siteinfo.products" />
           </div>
         </section>
       </div>
     </div>
-    <div class="background-image" style="background-image: url(./images/);"></div>
+    <div class="background-image"></div>
   </div>
 </template>
 
@@ -18,7 +24,7 @@
 import SlideProducts from './SlideProducts.vue'
 
 export default {
-  name: 'Activities',
+  name: 'Products',
   components: {
     SlideProducts
   },
@@ -28,4 +34,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  @import "../styles/components/_works.scss";
 </style>

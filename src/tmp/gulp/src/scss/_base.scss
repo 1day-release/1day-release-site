@@ -88,3 +88,14 @@ html {
     background-size: 180px 1px;
   }
 }
+
+.section-title{
+  font-family: $ff-mono;
+  letter-spacing: 0.3em;
+  font-weight: bold;
+  white-space: nowrap;
+  font-size: 4rem;
+  .text-color-accent{
+    font-size: 7rem;
+  }
+}

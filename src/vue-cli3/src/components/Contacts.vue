@@ -10,17 +10,17 @@
           <ul class="center-list">
             <li>
               <a class="sns-button" href="" target="_blank">
-                <img src="" alt="">
+                <img src="../assets/facebook_icon.svg" alt="">
               </a>
             </li>
             <li>
               <a class="sns-button" href="" target="_blank">
-                <img src="" alt="">
+                <img src="../assets/twitter_icon.svg" alt="">
               </a>
             </li>
             <li>
               <a class="sns-button" href="" target="_blank">
-                <img src="" alt="">
+                <img src="../assets/instagram_icon.svg" alt="">
               </a>
             </li>
           </ul>
@@ -39,4 +39,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  @import "../styles/components/_contact.scss";
 </style>
