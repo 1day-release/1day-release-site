@@ -452,7 +452,6 @@ export default {
       position: fixed;
       z-index: 10;
       height: 240px;
-      top: $padding;
       top: 50%;
       right: 0;
       bottom: 0;
@@ -470,10 +469,9 @@ export default {
       pointer-events: none;
 
       @media #{$device-l} {
-        // position: absolute;
-        right: inherit;
-        // left: 40px;
-        left: calc((100vw - 1080px) / 2 );
+        top: 60%;
+        right: auto;
+        left: auto;
         align-items: flex-start;
         padding: 0;
         margin: 0;
